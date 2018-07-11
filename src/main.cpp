@@ -7,7 +7,7 @@
 
 int main()
 {
-    Point2D p1(1,1, -2);
+    Point2D p1(0,1, -2);
     Point2D p2(1,0, 5);
     try {
         Spline sp(p1, p2);

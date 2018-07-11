@@ -5,55 +5,22 @@
 #ifndef SMOOTHNAVIGATOR_SPLINE_H
 #define SMOOTHNAVIGATOR_SPLINE_H
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-
 #include "Point2D.h"
-using namespace std;
+
 
 class Spline {
 public:
-    Spline(Point2D i, Point2D f)
-    {
-        if (*i.getX() == *f.getX())
-        {
-            throw "Function would be undefined.";
-        }
-        else if (*i.getX() > *f.getX())
-        {
-            mInitial = &f;
-            mFinal = &i;
-            mFlipped = true;
-        }
-        else
-        {
-            mInitial = &i;
-            mFinal = &f;
-            mFlipped = false;
-        }
-        mGenerate();
-    }
+    Spline(Point2D i, Point2D f);
 
-    double get(double x)
-    {
-        if (this->mFlipped)
-            return this->getValueAt(*this->mFinal->getX()-x);
-        return this->getValueAt(x);
-    }
+    double get(double x);
 
-    ~Spline()
-    {
-        delete(mInitial);
-        delete(mFinal);
-    }
 private:
-    Point2D * mInitial;
-    Point2D * mFinal;
+    Point2D mInitial;
+    Point2D mFinal;
 
     bool mFlipped;
 
-    double mCoefficents[4];
+    double mCoefficents[4] = {0,0,0,0};
 
     /*
      * A brief explanation of how the equations used in the function below were derived
@@ -87,72 +54,26 @@ private:
      *  c = f'(0)
      *  d = f(0)
       */
-    void mGenerate()
-    {
-        double matrix[4][5] = {
-                {*this->mFinal->getX(), *this->mFinal->getX(), *this->mFinal->getX(), 1, *this->mFinal->getY()},
-                {*this->mFinal->getX()*3, *this->mFinal->getX()*2, 1, 0, *this->mFinal->getSlope()},
-                {*this->mInitial->getX()*3, *this->mInitial->getX()*2, 1, 0, *this->mInitial->getSlope()},
-                {*this->mInitial->getX(), *this->mInitial->getX(), *this->mInitial->getX(), 1, *this->mInitial->getY()}
-        };
-        mPrintMatrix(matrix);
-        mRowReduce(matrix);
-        for (double i : mCoefficents)
-            std::cout << i << "\t";
-        std::cout << std::endl;
-    }
+    void mGenerate();
 
-    void mRowReduce(double matrix[4][5])
-    {
-        const int rows = 4; // Number of rows
-        const int colm = 5; // Number of columns
+    /**
+     * Row reduce a 4x5 matrix and put its answer into coefficents array
+     * @param matrix Matrix array to row reduce.
+     */
+    void mRowReduce(double matrix[4][5]);
 
-        int lead = 0;
+    /**
+     * Print out a 4x5 matrix to the console
+     * @param A
+     */
+    void mPrintMatrix(double A[4][5]);
 
-        while (lead < rows)
-        {
-            double d, m; // Division and Multiplier
-
-            for (int i = 0; i < rows; i++)
-            {
-                d = matrix[lead][lead];
-                m = matrix[i][lead] / d;
-
-                for (int j = 0; j < colm; j++)
-                {
-                    if (i == lead)
-                        matrix[i][j] /= d;
-                    else
-                        matrix[i][j] -= matrix[lead][j] * m;
-                }
-            }
-            lead++;
-        }
-        mPrintMatrix(matrix);
-        std::cout << "Matrix reduced" << std::endl;
-        for (int i = 0; i < rows; i++)
-            mCoefficents[i] = matrix[i][4];
-    }
-
-    void mPrintMatrix(double A[][5]) // Outputs the matrix
-    {
-        int p=4;
-        int q=5;
-
-        for (int i=0; i<p; i++) {
-            for (int j=0; j<q; j++) {
-                cout << setw(7) << setprecision(4) << A[i][j] << " ";
-            }
-            cout << endl;
-        }
-
-        cout << endl;
-    }
-
-    double getValueAt(double x)
-    {
-        return mCoefficents[0]*pow(x, 3) + mCoefficents[1]*pow(x, 2) + mCoefficents[2]*x + mCoefficents[3];
-    }
+    /**
+     * Get the associated y value at the value x from the cubic equation
+     * @param x x value
+     * @return y value
+     */
+    double getValueAt(double);
 };
 
 #endif //SMOOTHNAVIGATOR_SPLINE_H
