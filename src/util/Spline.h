@@ -6,7 +6,9 @@
 #define SMOOTHNAVIGATOR_SPLINE_H
 
 #include <iostream>
-#include "math.h"
+#include <iomanip>
+#include <cmath>
+
 #include "Point2D.h"
 using namespace std;
 
@@ -14,7 +16,11 @@ class Spline {
 public:
     Spline(Point2D i, Point2D f)
     {
-        if (*i.getX() > *f.getX())
+        if (*i.getX() == *f.getX())
+        {
+            throw "Function would be undefined.";
+        }
+        else if (*i.getX() > *f.getX())
         {
             mInitial = &f;
             mFinal = &i;
