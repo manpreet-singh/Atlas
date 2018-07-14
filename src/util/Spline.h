@@ -13,6 +13,7 @@ public:
     Spline(Point2D i, Point2D f);
 
     double get(double x);
+    double length();
 
 private:
     Point2D mInitial;

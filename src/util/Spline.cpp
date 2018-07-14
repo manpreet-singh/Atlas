@@ -41,6 +41,13 @@ double Spline::get(double x)
     return this->getValueAt(x);
 }
 
+double Spline::length()
+{
+    // Gotta do the integral to figure out this value bub;
+
+    return 0.0;
+}
+
 void Spline::mGenerate()
 {
     double matrix[4][5] = {

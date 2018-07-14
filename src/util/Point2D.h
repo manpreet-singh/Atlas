@@ -36,9 +36,9 @@ public:
     double * getSlope();
 
 private:
-    double mX;
-    double mY;
-    double mSlope;
+    double mX = 0;
+    double mY = 0;
+    double mSlope = 0;
 };
 
 
