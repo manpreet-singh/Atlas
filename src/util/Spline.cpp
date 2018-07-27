@@ -5,9 +5,9 @@
 #include <iostream>
 #include <iomanip>
 #include <cmath>
-#include <stdexcept>
 
 #include "Spline.h"
+#include "Calculations.h"
 
 using namespace std;
 using namespace util;
@@ -33,6 +33,7 @@ Spline::Spline(Point2D i, Point2D f)
         mFlipped = false;
     }
     mGenerate();
+    mSplineLength = Calculations::length(*i.getX(), *i.getY(), 100, this->lengthHelperFunction);
 }
 
 double Spline::get(double x)
@@ -44,9 +45,7 @@ double Spline::get(double x)
 
 double Spline::length()
 {
-    // Gotta do the integral to figure out this value bub;
-
-    return 0.0;
+    return mSplineLength;
 }
 
 void Spline::mGenerate()

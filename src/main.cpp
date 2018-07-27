@@ -8,7 +8,7 @@
 
 double func(double x)
 {
-    return sqrt(1 + pow(4*x, 2));
+    return sqrt(1 + pow(5*pow(x, 2), 2));
 }
 
 int main()

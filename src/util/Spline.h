@@ -26,6 +26,8 @@ namespace util
 
         double mCoefficents[4] = {0, 0, 0, 0};
 
+        double mSplineLength;
+
         /*
          * A brief explanation of how the equations used in the function below were derived
          *

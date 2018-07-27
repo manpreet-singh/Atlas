@@ -19,6 +19,15 @@ double Calculations::length(double a, double b, int resolution, double (*d)(doub
     return step/3 * ((*d)(a) + (*d)(b) + Calculations::recursion(b, a + step, step, *d));
 }
 
+/**
+ * Recursion Function to help calculate length of a curve
+ * @param end Endpoint of curve
+ * @param x Starting point of curve
+ * @param step Number to increment by
+ * @param d Function pointer
+ * @param even Helps keep track of things while recursioning (Yeah... don't even touch this value)
+ * @return part of the answer we need
+ */
 double Calculations::recursion(double end, double x, double step, double(*d)(double), bool even)
 {
     if(x > end)
