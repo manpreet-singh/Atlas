@@ -13,7 +13,7 @@ double func(double x)
 
 int main()
 {
-    double ans = util::Calculations::length(1, 2, 30, func);
+    double ans = util::Calculations::length(1, 2, 100, func);
     std::cout << ans << std::endl;
     return 0;
 }
