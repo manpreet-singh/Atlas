@@ -1,31 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <cmath>
 //#include <util/Point2D.h>
 //#include <util/Spline.h>
 
+#include "util/Calculations.h"
 
+double func(double x)
+{
+    return sqrt(1 + pow(4*x, 2));
+}
 
 int main()
 {
-//    Point2D p1(1,1, -2);
-//    Point2D p2(1,0, 5);
-//    try {
-//        Spline sp(p1, p2);
-//    } catch (std::exception& e) {
-//        std::cerr << "Exception caught" << std::endl;
-//        std::cerr << e.what() << std::endl;
-//        return -1;
-//    }
-    std::vector<int> vec;
-    vec.push_back(1);
-    vec.push_back(2);
-    vec.push_back(3);
-
-    for (auto i = vec.begin(); i < vec.end(); ++i)
-    {
-        std::cout << *i << "\t";
-    }
-    std::cout << std::endl;
-
+    double ans = util::Calculations::length(1, 2, 30, func);
+    std::cout << ans << std::endl;
     return 0;
 }

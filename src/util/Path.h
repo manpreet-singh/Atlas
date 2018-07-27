@@ -10,24 +10,29 @@
 #include <queue>
 #include "Spline.h"
 
-class Path
+namespace util
 {
-public:
-    Path() = default;
+    class Path
+    {
+    public:
+        Path() = default;
 
-    void addPoint(Point2D);
-    void generate();
-    void setSpeed(double);
+        void addPoint(Point2D);
 
-private:
-    std::string mName;
-    std::vector<Spline*> mSplines;
-    std::queue<Point2D> mPointsQueue;
+        void generate();
 
-    double mSpeed = 0;
-    double mPathLength = 0;
+        void setSpeed(double);
 
-};
+    private:
+        std::string mName;
+        std::vector<Spline *> mSplines;
+        std::queue<Point2D> mPointsQueue;
+
+        double mSpeed = 0;
+        double mPathLength = 0;
+
+    };
+}
 
 
 #endif //SMOOTHNAVIGATOR_PATH_H

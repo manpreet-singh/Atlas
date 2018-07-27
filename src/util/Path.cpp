@@ -4,6 +4,9 @@
 
 #include <iostream>
 #include "Path.h"
+#include "Calculations.h"
+
+using namespace util;
 
 /**
  * Add a point to the path

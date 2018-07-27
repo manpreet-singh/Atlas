@@ -10,6 +10,7 @@
 #include "Spline.h"
 
 using namespace std;
+using namespace util;
 
 Spline::Spline(Point2D i, Point2D f)
 {
@@ -111,4 +112,14 @@ void Spline::mPrintMatrix(double A[4][5])
 double Spline::getValueAt(double x)
 {
     return mCoefficents[0]*pow(x, 3) + mCoefficents[1]*pow(x, 2) + mCoefficents[2]*x + mCoefficents[3];
+}
+
+double Spline::derivativeValueAt(double x)
+{
+    return mCoefficents[0]*pow(x, 2) + mCoefficents[1]*x + mCoefficents[2];
+}
+
+double Spline::lengthHelperFunction(double x)
+{
+    return sqrt(1 + pow(derivativeValueAt(x), 2));
 }
