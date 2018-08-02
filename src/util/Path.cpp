@@ -1,11 +1,11 @@
-//
-// Created by singh on 7/14/2018.
-//
-
 #include <iostream>
+#include <utility>
 #include "Path.h"
 
 using namespace util;
+
+Path::Path(std::string s) : mName(std::move(s))
+{}
 
 /**
  * Add a point to the path
@@ -52,4 +52,32 @@ void Path::generate()
 void Path::setSpeed(double s)
 {
     this->mSpeed = s;
+}
+
+/**
+ * Get the X value along the path at a given time t
+ * @param t Time
+ * @return X value along Path
+ */
+double Path::getX(double t)
+{
+    return t * this->mSpeed;
+}
+
+/**
+ * Get the Y value along the path at a given time t
+ * @param t Time
+ * @return Y value along Path
+ */
+double Path::getY(double t)
+{
+    Spline *foo = nullptr;
+    for (Spline *s : this->mSplines)
+    {
+        if (s->inRange(getX(t)))
+            foo = s;
+    }
+    if (foo == nullptr)
+        throw std::range_error(std::string("Inputted value is not within the range of this function"));
+    return foo->get(getX(t));
 }
