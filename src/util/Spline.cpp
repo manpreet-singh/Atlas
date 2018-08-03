@@ -28,6 +28,10 @@ Spline::Spline(Point2D i, Point2D f)
         mFinal = f;
         mFlipped = false;
     }
+    std::cout << "Generating Spline for points:" << endl;
+    std::cout << "Xi: " << *mInitial.getX() << " Yi: " << *mInitial.getY() << " Mi: " << *mInitial.getSlope() << std::endl;
+    std::cout << "Xf: " << *mFinal.getX() << " Yf: " << *mFinal.getY() << " Mf: " << *mFinal.getSlope() << std::endl;
+
     mGenerate();
     mSplineLength = Calculations::length(*i.getX(), *f.getX(), 100, std::bind(this->lengthHelperFunction, this, _1));
 }
@@ -84,24 +88,21 @@ bool Spline::inRange(double foo)
 void Spline::mGenerate()
 {
     double matrix[4][5] = {
-            {*mFinal.getX(), *mFinal.getX(), *mFinal.getX(), 1, *mFinal.getY()},
-            {*mFinal.getX()*3, *mFinal.getX()*2, 1, 0, *mFinal.getSlope()},
-            {*mInitial.getX()*3, *mInitial.getX()*2, 1, 0, *mInitial.getSlope()},
-            {*mInitial.getX(), *mInitial.getX(), *mInitial.getX(), 1, *mInitial.getY()}
+            {std::pow(*mFinal.getX(),3),     std::pow(*mFinal.getX(),2),    *mFinal.getX(),   1,  *mFinal.getY()},
+            {std::pow(*mFinal.getX(),2)*3,   *mFinal.getX()*2,              1,                0,  *mFinal.getSlope()},
+            {std::pow(*mInitial.getX(),2)*3, *mInitial.getX()*2,            1,                0,  *mInitial.getSlope()},
+            {std::pow(*mInitial.getX(),3),   std::pow(*mInitial.getX(),2),  *mInitial.getX(), 1,  *mInitial.getY()}
     };
-    mPrintMatrix(matrix);
     mRowReduce(matrix);
-    for (double i : mCoefficents)
-        std::cout << i << "\t";
-    std::cout << std::endl;
 }
 
 /**
- * Row reduce a 4x5 matrix and put its answer into coefficents array
+ * Row reduce a 4x5 matrix and put its answer into coefficient array
  * @param matrix Matrix array to row reduce.
  */
 void Spline::mRowReduce(double matrix[4][5])
 {
+    mPrintMatrix(matrix);
     const int rows = 4; // Number of rows
     const int colm = 5; // Number of columns
 
@@ -126,7 +127,8 @@ void Spline::mRowReduce(double matrix[4][5])
         }
         lead++;
     }
-    std::cout << "Matrix reduced" << std::endl;
+    std::cout << "Matrix Reduced" << std::endl;
+    mPrintMatrix(matrix);
     for (int i = 0; i < rows; i++)
         mCoefficents[i] = matrix[i][4];
 }

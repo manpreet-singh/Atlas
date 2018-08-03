@@ -25,6 +25,8 @@ namespace util
 
         double getY(double);
 
+        double getLength();
+
     private:
         std::string mName;
         std::vector<Spline *> mSplines;

@@ -29,10 +29,10 @@ void Path::generate()
 
     unsigned long long int queueSize = this->mPointsQueue.size(); // why tho @_@
 
-    for (int i = 0; i < queueSize; i++)
+    for (int i = 0; i < queueSize - 1; i++)
     {
         Point2D p1 = this->mPointsQueue.front();
-        this->mPointsQueue.pop();
+        mPointsQueue.pop();
 
         Point2D p2 = this->mPointsQueue.front();
 
@@ -71,13 +71,19 @@ double Path::getX(double t)
  */
 double Path::getY(double t)
 {
+    // TODO Find a way to not go through the splines vector to determine if the value is in range or not.
     Spline *foo = nullptr;
     for (Spline *s : this->mSplines)
-    {
         if (s->inRange(getX(t)))
             foo = s;
-    }
+
+    // If foo is STILL null, throw a range error
     if (foo == nullptr)
         throw std::range_error(std::string("Inputted value is not within the range of this function"));
     return foo->get(getX(t));
+}
+
+double Path::getLength()
+{
+    return this->mPathLength;
 }

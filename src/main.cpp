@@ -1,14 +1,18 @@
 #include <iostream>
-#include <vector>
-#include <cmath>
-#include <util/Spline.h>
 
-#include "util/Calculations.h"
+#include "util/Path.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World" << std::endl;
-    util::Spline s(util::Point2D(), util::Point2D(1,1,1));
-    std::cout << s.length() << std::endl;
+    util::Path p("bob");
+    p.addPoint(util::Point2D(0,0,0));
+    p.addPoint(util::Point2D(1,1,1));
+    p.addPoint(util::Point2D(2,1,-0.5));
+    p.addPoint(util::Point2D(4,5,10));
+    p.generate();
+
+    cout << p.getLength() << endl;
     return 0;
 }
