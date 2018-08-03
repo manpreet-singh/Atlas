@@ -29,7 +29,7 @@ Spline::Spline(Point2D i, Point2D f)
         mFlipped = false;
     }
     mGenerate();
-    mSplineLength = Calculations::length(*i.getX(), *i.getY(), 100, this->lengthHelperFunction);
+    mSplineLength = Calculations::length(*i.getX(), *f.getX(), 100, std::bind(this->lengthHelperFunction, this, _1));
 }
 
 double Spline::get(double x)
@@ -126,7 +126,6 @@ void Spline::mRowReduce(double matrix[4][5])
         }
         lead++;
     }
-    mPrintMatrix(matrix);
     std::cout << "Matrix reduced" << std::endl;
     for (int i = 0; i < rows; i++)
         mCoefficents[i] = matrix[i][4];
@@ -166,5 +165,5 @@ double Spline::derivativeValueAt(double x)
 
 double Spline::lengthHelperFunction(double x)
 {
-    return sqrt(1 + pow(derivativeValueAt(x), 2));
+    return sqrt(1 + pow(this->derivativeValueAt(x), 2));
 }
