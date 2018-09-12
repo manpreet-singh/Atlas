@@ -50,7 +50,7 @@ double Spline::length()
 
 bool Spline::inRange(double foo)
 {
-    return foo > *this->mInitial.getX() && foo < *this->mFinal.getX();
+    return foo >= *this->mInitial.getX() && foo <= *this->mFinal.getX();
 }
 
 /*
