@@ -44,15 +44,10 @@ namespace util
 
         double lengthHelperFunction(double);
 
-        class Calculations
-        {
-        public:
-            static double length(double, double, int, std::function<double(double)>);
+        double calculateLength(double&, double&, int);
 
-        private:
-            static double lengthRecursion(double, double, double, std::function<double(double)>, bool = false);
+        double lengthRecursion(double, double, double, bool = false);
 
-        };
     };
 }
 

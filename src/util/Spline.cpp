@@ -29,8 +29,7 @@ Spline::Spline(Point2D i, Point2D f)
     std::cout << "Xf: " << *mFinal.getX() << " Yf: " << *mFinal.getY() << " Mf: " << *mFinal.getSlope() << std::endl;
 
     mGenerate();
-    mSplineLength = Calculations::length(*i.getX(), *f.getX(), 100, std::bind(Spline::lengthHelperFunction, this, placeholders::_1 ));
-    // mSplineLength = Calculations::length(*i.getX(), *f.getX(), 100, );
+    mSplineLength = calculateLength(*i.getX(), *f.getX(), 100);
 }
 
 double Spline::get(double x)
@@ -175,12 +174,12 @@ double Spline::lengthHelperFunction(double x)
  * @param d Function pointer
  * @return Length of a curve
  */
-double Spline::Calculations::length(double a, double b, int resolution, std::function<double(double)> d)
+double Spline::calculateLength(double& a, double& b, int resolution)
 {
     if (a == b)
         throw std::logic_error(std::string("Starting and End points are the same!"));
     double step = (b-a)/resolution;
-    return step/3 * (d(a) + d(b) + Calculations::lengthRecursion(b, a + step, step, d));
+    return step/3 * (lengthHelperFunction(a) + lengthHelperFunction(b) + lengthRecursion(b, a + step, step));
 }
 
 /**
@@ -192,12 +191,12 @@ double Spline::Calculations::length(double a, double b, int resolution, std::fun
  * @param even Helps keep track of things while recursioning (Yeah... don't even touch this value)
  * @return part of the answer we need
  */
-double Spline::Calculations::lengthRecursion(double end, double x, double step, std::function<double(double)> d, bool even)
+double Spline::lengthRecursion(double end, double x, double step, bool even)
 {
     if(x > end)
         return 0;
     if (even)
-        return 2 * d(x) + lengthRecursion(end, x + step, step, d, false);
+        return 2 * lengthHelperFunction(x) + lengthRecursion(end, x + step, step, false);
 
-    return 4 * d(x) + lengthRecursion(end, x + step, step, d, true);
+    return 4 * lengthHelperFunction(x) + lengthRecursion(end, x + step, step, true);
 }
