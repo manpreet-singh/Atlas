@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.10)
-project(SmoothNavigator)
+project(Atlas)
 
 set(CMAKE_CXX_STANDARD 17)
 set(SFML_DIR "${CMAKE_CURRENT_SOURCE_DIR}/cmake_config")
@@ -12,11 +12,7 @@ file(GLOB_RECURSE SOURCE_FILES
         "${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
         )
 
-add_executable(SmoothNavigator ${SOURCE_FILES})
+add_executable(Atlas ${SOURCE_FILES})
 
-find_package(SFML 2 COMPONENTS system window graphics audio REQUIRED)
-if (SFML_FOUND)
-    target_link_libraries(SmoothNavigator sfml-system sfml-window sfml-graphics sfml-audio)
-endif ()
 
 
