@@ -1,5 +1,5 @@
-#ifndef SMOOTHNAVIGATOR_PATH_H
-#define SMOOTHNAVIGATOR_PATH_H
+#ifndef ATLAS_PATH_H
+#define ATLAS_PATH_H
 
 #include <string>
 #include <vector>
@@ -39,4 +39,4 @@ namespace util
 }
 
 
-#endif //SMOOTHNAVIGATOR_PATH_H
+#endif //ATLAS_PATH_H

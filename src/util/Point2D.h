@@ -1,5 +1,5 @@
-#ifndef SMOOTHNAVIGATOR_POINT2D_H
-#define SMOOTHNAVIGATOR_POINT2D_H
+#ifndef ATLAS_POINT2D_H
+#define ATLAS_POINT2D_H
 
 namespace util
 {
@@ -28,4 +28,4 @@ namespace util
 }
 
 
-#endif //SMOOTHNAVIGATOR_POINT2D_H
+#endif /ATLASR_POINT2D_H

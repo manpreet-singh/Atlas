@@ -1,5 +1,5 @@
-#ifndef SMOOTHNAVIGATOR_SPLINE_H
-#define SMOOTHNAVIGATOR_SPLINE_H
+#ifndef ATLAS_SPLINE_H
+#define ATLAS_SPLINE_H
 
 #include <iostream>
 #include <iomanip>
@@ -51,4 +51,4 @@ namespace util
     };
 }
 
-#endif //SMOOTHNAVIGATOR_SPLINE_H
+#endif //ATLAS_SPLINE_H

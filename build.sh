@@ -2,7 +2,7 @@
 
 if [ -d "cmake-build-debug" ]
 then
-    echo "Directly already Exists"
+    echo "Build Directory already Exists"
     cd cmake-build-debug
     rm -r *
 else
@@ -13,3 +13,6 @@ fi
 
 cmake ..
 make
+
+cd ../
+bash deploy.sh
