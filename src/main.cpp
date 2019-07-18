@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "util/Path.h"
+// #include "beaglebone/GPIO.h"
 
 using namespace std;
 
@@ -12,6 +13,7 @@ int main()
     testPath.addPoint(util::Point2D(200,200,-5));
     testPath.generate();
 
+    // GPIO gp();
     cout << "Path Length: " << testPath.getLength() << endl;
 
     return EXIT_SUCCESS;

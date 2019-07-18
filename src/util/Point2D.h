@@ -28,4 +28,4 @@ namespace util
 }
 
 
-#endif /ATLASR_POINT2D_H
+#endif //ATLAS_POINT2D_H
