@@ -6,7 +6,7 @@ GPIO::GPIO(std::string pin) : _pin(pin)
 {
     // Grab current pinmode from system.
     std::ifstream mode_file;
-    mode_file.open(GPIO_PATH(this->_pin)"/direction", std::fstream::in);
+    mode_file.open(GPIO_PATH(this->_pin)"/direction", std::ios::in);
     std::string data;
     if (mode_file.is_open()) 
     {
@@ -49,4 +49,30 @@ void GPIO::setPin(bool foo)
         fs << (foo ? 1 : 0);
 
     fs.close();    
+}
+
+/**
+ * Read the pin input value when this pin is in Input mode.
+ * @returns 1 if pin is HIGH, 0 if pin is LOW, -1 if pin is not in the correct mode.
+ */
+int GPIO::readPin()
+{
+    if (this->_mode != INPUT) // Check to see if we're in INPUT mode
+        return -1;
+    
+    std::ifstream input;
+    int pin_value;
+    std::string data;
+
+    input.open(GPIO_PATH(this->_pin)"/value", std::ios::in); // Open file
+    if (input.is_open())
+        std::getline(input, data); // Read data
+
+    input.close(); // Close the file
+    
+    std::stringstream ss(data); // String stream to convert to convert data to an integer
+
+    ss >> pin_value; 
+
+    return pin_value;
 }

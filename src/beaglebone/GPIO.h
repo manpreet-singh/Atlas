@@ -2,6 +2,7 @@
 #define ATLAS_GPIO_H
 
 #include <string>
+#include <sstream>
 #include <fstream>
 
 class GPIO
@@ -14,6 +15,8 @@ class GPIO
         void pinMode(GPIO::PINMODE);
 
         void setPin(bool);
+
+        int readPin();
 
         // void enablePullUp(); // Testing this feature
 
