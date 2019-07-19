@@ -5,13 +5,17 @@
 GPIO::GPIO(std::string pin) : _pin(pin)
 {
     // Grab current pinmode from system.
-    std::ofstream mode_file;
+    std::ifstream mode_file;
     mode_file.open(GPIO_PATH(this->_pin)"/direction", std::fstream::in);
-    if (mode_file.is_open())
+    std::string data;
+    if (mode_file.is_open()) 
     {
-        // TODO: Parse the data and set appropriate ENUM to _mode
+        std::getline(mode_file, data);
+        if (data == "in")
+            this->_mode = INPUT;
+        else
+            this->_mode = OUTPUT;
     }
-    
 }
 
 /**
@@ -20,15 +24,18 @@ GPIO::GPIO(std::string pin) : _pin(pin)
  */
 void GPIO::pinMode(GPIO::PINMODE mode)
 {
-    this->_mode = mode;
-    std::fstream fs;
-    fs.open(GPIO_PATH(this->_pin)"/direction", std::fstream::out);
-    if (mode == INPUT)
-        fs << "in";
-    else if (mode == OUTPUT)
-        fs << "out";
-        
-    fs.close();
+    if (this->_mode != mode)
+    {
+        this->_mode = mode;
+        std::fstream fs;
+        fs.open(GPIO_PATH(this->_pin)"/direction", std::fstream::out);
+        if (mode == INPUT)
+            fs << "in";
+        else if (mode == OUTPUT)
+            fs << "out";
+            
+        fs.close();
+    }
 }
 
 /**
@@ -36,5 +43,10 @@ void GPIO::pinMode(GPIO::PINMODE mode)
  */
 void GPIO::setPin(bool foo)
 {
-    //TODO: Set pin value to HIGH(1) or LOW(0)
+    std::fstream fs;
+    fs.open(GPIO_PATH(this->_pin)"/value", std::fstream::out);
+    if (fs.is_open())
+        fs << (foo ? 1 : 0);
+
+    fs.close();    
 }

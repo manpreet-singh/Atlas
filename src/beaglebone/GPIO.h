@@ -1,8 +1,6 @@
 #ifndef ATLAS_GPIO_H
 #define ATLAS_GPIO_H
 
-
-
 #include <string>
 #include <fstream>
 
@@ -17,7 +15,7 @@ class GPIO
 
         void setPin(bool);
 
-        // TO-DO: Write code to turn GPIO on/off as well as putting GPIO into input mode
+        // void enablePullUp(); // Testing this feature
 
     private:
         std::string _pin;
