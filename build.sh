@@ -2,9 +2,8 @@
 
 if [ -d "cmake-build-debug" ]
 then
-    echo "Build Directory already Exists"
+    echo "Using existing build directory"
     cd cmake-build-debug
-    rm -r *
 else
     echo "Making Build Directory"
     mkdir cmake-build-debug

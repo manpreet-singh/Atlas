@@ -5,6 +5,10 @@
 #include <sstream>
 #include <fstream>
 
+
+/*
+ * GPIO Class to access and get basic (boolean) control over pins.
+ */
 class GPIO
 {
     public:
