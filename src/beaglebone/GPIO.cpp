@@ -1,12 +1,11 @@
 #include "GPIO.h"
 
-#define GPIO_PATH(p) "/sys/class/gpio/" #p
-
 GPIO::GPIO(std::string pin) : _pin(pin)
 {
+    std::cout << "Opening pin: " << path(pin) << std::endl;
     // Grab current pinmode from system.
     std::ifstream mode_file;
-    mode_file.open(GPIO_PATH(this->_pin)"/direction", std::ios::in);
+    mode_file.open(path(pin)+"/direction", std::ios::in);
     std::string data;
     if (mode_file.is_open()) 
     {
@@ -16,6 +15,7 @@ GPIO::GPIO(std::string pin) : _pin(pin)
         else
             this->_mode = OUTPUT;
     }
+    mode_file.close();
 }
 
 /**
@@ -28,7 +28,7 @@ void GPIO::pinMode(GPIO::PINMODE mode)
     {
         this->_mode = mode;
         std::fstream fs;
-        fs.open(GPIO_PATH(this->_pin)"/direction", std::fstream::out);
+        fs.open(path(this->_pin)+"/direction", std::fstream::out);
         if (mode == INPUT)
             fs << "in";
         else if (mode == OUTPUT)
@@ -44,7 +44,7 @@ void GPIO::pinMode(GPIO::PINMODE mode)
 void GPIO::setPin(bool foo)
 {
     std::fstream fs;
-    fs.open(GPIO_PATH(this->_pin)"/value", std::fstream::out);
+    fs.open(path(this->_pin)+"/value", std::fstream::out);
     if (fs.is_open())
         fs << (foo ? 1 : 0);
 
@@ -64,7 +64,7 @@ int GPIO::readPin()
     int pin_value;
     std::string data;
 
-    input.open(GPIO_PATH(this->_pin)"/value", std::ios::in); // Open file
+    input.open(path(this->_pin)+"/value", std::ios::in); // Open file
     if (input.is_open())
         std::getline(input, data); // Read data
 
@@ -75,4 +75,9 @@ int GPIO::readPin()
     ss >> pin_value; 
 
     return pin_value;
+}
+
+std::string GPIO::path(std::string s)
+{
+    return "/sys/class/gpio/" + s;
 }

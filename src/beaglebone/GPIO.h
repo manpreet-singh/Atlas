@@ -4,6 +4,7 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <iostream>
 
 
 /*
@@ -25,6 +26,7 @@ class GPIO
         // void enablePullUp(); // Testing this feature
 
     private:
+        std::string path(std::string);
         std::string _pin;
         PINMODE _mode;
 };
