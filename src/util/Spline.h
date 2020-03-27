@@ -1,3 +1,7 @@
+/*
+This class defines a 2 dimensional spline with a start and end point.
+Manpreet Singh 2018
+*/
 #ifndef ATLAS_SPLINE_H
 #define ATLAS_SPLINE_H
 

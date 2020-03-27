@@ -14,4 +14,4 @@ cmake ..
 make
 
 cd ../
-bash deploy.sh
+#bash deploy.sh
