@@ -7,8 +7,9 @@
 #include <iostream>
 
 
-/*
- * GPIO Class to access and get basic (boolean) control over pins.
+/**
+ * GPIO Class to access and get basic (boolean) control over pins of the BBB
+ * @author Manpreet Singh 2020
  */
 class GPIO
 {
@@ -23,7 +24,7 @@ class GPIO
 
         int readPin();
 
-        // void enablePullUp(); // Testing this feature
+        // void enablePullUp(); // Feature has yet to be tested
 
     private:
         std::string path(std::string);
