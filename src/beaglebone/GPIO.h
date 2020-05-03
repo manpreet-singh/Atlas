@@ -12,7 +12,6 @@
  * GPIO Class to access and get basic (boolean) control over pins of the BBB
  * @author Manpreet Singh 2020
  */
-[[DEPRECATED]]
 class GPIO
 {
     public:

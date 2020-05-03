@@ -87,7 +87,7 @@ void PWM::enable()
         std::fstream fs;
         fs.open(path(this->_pwm_chip)+"/enable", std::fstream::out);
         fs << 1;
-        fs.close;
+        fs.close();
     }
 }
 
@@ -103,7 +103,7 @@ void PWM::disable()
         std::fstream fs;
         fs.open(path(this->_pwm_chip)+"/enable", std::fstream::out);
         fs << 0;
-        fs.close;
+        fs.close();
     }
 }
 

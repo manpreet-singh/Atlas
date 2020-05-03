@@ -15,11 +15,11 @@ set(SYS_ARCH ${CMAKE_SYSTEM_PROCESSOR})
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 file(GLOB_RECURSE SOURCE_FILES
-        #"${CMAKE_CURRENT_SOURCE_DIR}/src/*.c",
         "${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp" ,
         "${CMAKE_CURRENT_SOURCE_DIR}/src/*.h"
         )
 
 add_executable(Atlas ${SOURCE_FILES})
-
+target_include_directories(Atlas PUBLIC /usr/local/include/)
+target_link_libraries(Atlas -ladafruit-bbio0 -ladafruit-bbio1 -pthread)
 

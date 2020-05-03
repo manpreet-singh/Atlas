@@ -9,13 +9,13 @@
  */
 L298N::L298N(std::string left1, std::string left2, std::string pwmLeft, std::string right1, std::string right2, std::string pwmRight)
 {
-    this->_leftPin1 = &adafruit::bbio::Gpio(left1, adafruit::bbio::Gpio::Direction::Output);
-    this->_leftPin2 = &adafruit::bbio::Gpio(left2, adafruit::bbio::Gpio::Direction::Output);
-    this->_leftPWM = &adafruit::bbio::Pwm(pwmLeft);
+    this->_leftPin1 = new adafruit::bbio::Gpio(left1, adafruit::bbio::Gpio::Direction::Output);
+    this->_leftPin2 = new adafruit::bbio::Gpio(left2, adafruit::bbio::Gpio::Direction::Output);
+    this->_leftPWM = new adafruit::bbio::Pwm(pwmLeft);
 
-    this->_rightPin1 = &adafruit::bbio::Gpio(right1, adafruit::bbio::Gpio::Direction::Output);    
-    this->_rightPin2 = &adafruit::bbio::Gpio(right2, adafruit::bbio::Gpio::Direction::Output);
-    this->_rightPWM = &adafruit::bbio::Pwm(pwmRight);
+    this->_rightPin1 = new adafruit::bbio::Gpio(right1, adafruit::bbio::Gpio::Direction::Output);    
+    this->_rightPin2 = new adafruit::bbio::Gpio(right2, adafruit::bbio::Gpio::Direction::Output);
+    this->_rightPWM = new adafruit::bbio::Pwm(pwmRight);
 }
 
 /**

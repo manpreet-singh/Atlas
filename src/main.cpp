@@ -1,23 +1,21 @@
 #include <iostream>
+// #include <unistd.h>
 
-#include "unistd.h"
+// #include "util/Path.h"
+// #include "util/Point2D.h"
 
-#include "util/Path.h"
-#include "util/Point2D.h"
-#include "beaglebone/GPIO.h"
-
-#include "adafruit/bbio/pwm.h"
+#include "beaglebone/L298N.h"
 
 using namespace std;
 
 int main()
 {
-    util::Path testPath("Bob");
-    testPath.addPoint(util::Point2D(0,0,0));
-    testPath.addPoint(util::Point2D(1, 1, 0));
-    testPath.addPoint(util::Point2D(2,1,-5));
-    testPath.generate();
-    cout << "Path Length: " << testPath.getLength() << endl;
+    // util::Path testPath("Bob");
+    // testPath.addPoint(util::Point2D(0,0,0));
+    // testPath.addPoint(util::Point2D(1, 1, 0));
+    // testPath.addPoint(util::Point2D(2,1,-5));
+    // testPath.generate();
+    // cout << "Path Length: " << testPath.getLength() << endl;
 
     // adafruit::bbio::Pwm
 
@@ -35,6 +33,8 @@ int main()
     //     cout << "OFF" << endl;
     //     usleep(500000);
     // }
+
+    cout << "ello there" << endl;
 
     return EXIT_SUCCESS;
 }
