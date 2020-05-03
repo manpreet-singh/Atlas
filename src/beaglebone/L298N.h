@@ -5,32 +5,45 @@
 #include <cmath>
 #include <functional>
 
-/*
+#include "adafruit/bbio/gpio.h"
+#include "adafruit/bbio/pwm.h"
+
+#define PWM_FREQ 1000
+
+/**
  * L298N Dual motor H-Bridge controller driver.
  */
 class L298N 
 {
     public:
-        L298N(std::string, std::string, std::string, std::string);
+
+        // Contructor
+        L298N(std::string, std::string, std::string, std::string, std::string, std::string);
+
+        // Set motor values
         void setMotors(double, double);
+
+        // Enable the device
+        void enable(bool);
+        
+        // Destructor
+        ~L298N();
     private:
 
-        std::string _leftPin1;
-        std::string _leftPin2;
+        adafruit::bbio::Gpio * _leftPin1;
+        adafruit::bbio::Gpio * _leftPin2;
 
-        std::string _rightPin1;
-        std::string _rightPin2;
+        adafruit::bbio::Gpio * _rightPin1;
+        adafruit::bbio::Gpio * _rightPin2;
 
-        std::string _leftPWM;
-        std::string _rightPWM;
+        adafruit::bbio::Pwm * _leftPWM;
+        adafruit::bbio::Pwm * _rightPWM;
 
-        void setLeftDirection();
-        void setRightDirection();
+        void setLeftSpeed(double);
+        void setRightSpeed(double);
 
-        void enableLeft(bool);
-        void enableRight(bool);
+        bool _enabled = false;
 
-        
 };
 
 #endif //ATLAS_L298N_H

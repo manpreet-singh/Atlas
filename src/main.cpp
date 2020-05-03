@@ -6,6 +6,8 @@
 #include "util/Point2D.h"
 #include "beaglebone/GPIO.h"
 
+#include "adafruit/bbio/pwm.h"
+
 using namespace std;
 
 int main()
@@ -16,6 +18,8 @@ int main()
     testPath.addPoint(util::Point2D(2,1,-5));
     testPath.generate();
     cout << "Path Length: " << testPath.getLength() << endl;
+
+    // adafruit::bbio::Pwm
 
     // cout << "Testing GPIO pin contorl on GPIO pin 60" << endl;
 

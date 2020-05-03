@@ -6,10 +6,13 @@
 #include <fstream>
 #include <iostream>
 
+#define __DEPRECATED 1
+
 /**
  * PWM Class to access the different PWM chips on the BBB
  * @author Manpreet Singh 2020
  */ 
+[[DEPRECATED]]
 class PWM
 {
 	public:

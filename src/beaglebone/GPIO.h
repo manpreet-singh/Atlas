@@ -6,16 +6,18 @@
 #include <fstream>
 #include <iostream>
 
+#define __DEPRECATED 1
 
 /**
  * GPIO Class to access and get basic (boolean) control over pins of the BBB
  * @author Manpreet Singh 2020
  */
+[[DEPRECATED]]
 class GPIO
 {
     public:
         enum PINMODE {INPUT, OUTPUT};
-
+        
         GPIO(std::string);
 
         void pinMode(GPIO::PINMODE);
