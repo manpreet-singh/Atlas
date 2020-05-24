@@ -1,7 +1,7 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.7)
 project(Atlas)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 set(SYS_ARCH ${CMAKE_SYSTEM_PROCESSOR})
 
 if(${SYS_ARCH} STREQUAL "x86_64")

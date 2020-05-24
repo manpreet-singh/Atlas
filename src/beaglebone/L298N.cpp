@@ -83,8 +83,10 @@ void L298N::setRightSpeed(double speed)
         this->_rightPin1->set_value(adafruit::bbio::Gpio::Value::Low);
         this->_rightPin2->set_value(adafruit::bbio::Gpio::Value::High);
     }
-
-    this->_rightPWM->set_duty_cycle(100*speed);
+	
+	double dutyCycleFactor = (speed + 1)/2;
+	
+    this->_rightPWM->set_duty_cycle(100*dutyCycleFactor);
 }
 
 
