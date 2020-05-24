@@ -17,22 +17,17 @@ int main()
     // testPath.generate();
     // cout << "Path Length: " << testPath.getLength() << endl;
 
-    // adafruit::bbio::Pwm
+    // Construct the L298N Motor Driver with 4 control pins and 2 PWM pins
+    L298N esc("P9_11", "P9_13", "P9_15", "P9_17", "P9_14", "P9_16");
+    esc.enable(true);
+    double speed;
 
-    // cout << "Testing GPIO pin contorl on GPIO pin 60" << endl;
-
-    // GPIO ledPin("gpio60");
-    // ledPin.pinMode(GPIO::PINMODE::OUTPUT);
-
-    // while (1) 
-    // {
-    //     ledPin.setPin(true);
-    //     cout << "ON" << endl;
-    //     usleep(500000);
-    //     ledPin.setPin(false);
-    //     cout << "OFF" << endl;
-    //     usleep(500000);
-    // }
+    while (1) 
+    {
+        cout << "Enter motor speeds between -1 and 1 : ";
+        cin >> speed;
+        esc.setMotors(speed, speed);
+    }
 
     cout << "ello there" << endl;
 
