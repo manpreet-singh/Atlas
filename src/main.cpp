@@ -38,7 +38,5 @@ int main()
         }
     }
 
-    cout << "ello there" << endl;
-
     return EXIT_SUCCESS;
 }
