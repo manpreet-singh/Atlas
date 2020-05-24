@@ -18,7 +18,7 @@ int main()
     // cout << "Path Length: " << testPath.getLength() << endl;
 
     // Construct the L298N Motor Driver with 4 control pins and 2 PWM pins
-    L298N esc("P9_11", "P9_13", "P9_15", "P9_17", "P9_14", "P9_16");
+    L298N esc("P9_11", "P9_13", "P9_14", "P9_15", "P9_17", "P9_16");
     esc.enable(true);
     double speed;
 
@@ -26,7 +26,15 @@ int main()
     {
         cout << "Enter motor speeds between -1 and 1 : ";
         cin >> speed;
-        esc.setMotors(speed, speed);
+        try 
+        {
+            esc.setMotors(speed, speed);
+        } 
+        catch (exception& e)
+        {
+            cout << "Exception caught: "; 
+            cout << e.what() << endl;
+        }
     }
 
     cout << "ello there" << endl;
