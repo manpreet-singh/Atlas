@@ -12,10 +12,12 @@ L298N::L298N(std::string left1, std::string left2, std::string pwmLeft, std::str
     this->_leftPin1 = new adafruit::bbio::Gpio(left1, adafruit::bbio::Gpio::Direction::Output);
     this->_leftPin2 = new adafruit::bbio::Gpio(left2, adafruit::bbio::Gpio::Direction::Output);
     this->_leftPWM = new adafruit::bbio::Pwm(pwmLeft);
+    this->_leftPWM->start();
 
     this->_rightPin1 = new adafruit::bbio::Gpio(right1, adafruit::bbio::Gpio::Direction::Output);    
     this->_rightPin2 = new adafruit::bbio::Gpio(right2, adafruit::bbio::Gpio::Direction::Output);
     this->_rightPWM = new adafruit::bbio::Pwm(pwmRight);
+    this->_rightPWM->start();
 }
 
 /**
