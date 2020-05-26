@@ -28,7 +28,7 @@ int main()
     {
         cout << "Enter motor speeds between -1 and 1 : ";
         cin >> speed;
-        if (abs(speed) > 1)
+        if (abs(speed) <= 1)
         {
             try 
             {
