@@ -1,5 +1,6 @@
 #include <iostream>
 #include <exception>
+#include <cmath>
 // #include <unistd.h>
 
 // #include "util/Path.h"
@@ -27,15 +28,20 @@ int main()
     {
         cout << "Enter motor speeds between -1 and 1 : ";
         cin >> speed;
-        try 
+        if (abs(speed) > 1)
         {
-            esc.setMotors(speed, speed);
-        } 
-        catch (exception& e)
-        {
-            cout << "Exception caught: "; 
-            cout << e.what() << endl;
+            try 
+            {
+                esc.setMotors(speed, speed);
+            }
+            catch (exception& e)
+            {
+                cout << "Exception caught: "; 
+                cout << e.what() << endl;
+            }
         }
+        else
+            break;
     }
 
     return EXIT_SUCCESS;
