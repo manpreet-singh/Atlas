@@ -89,6 +89,14 @@ void L298N::setRightSpeed(double speed)
     this->_rightPWM->set_duty_cycle(100*dutyCycleFactor);
 }
 
+void L298N::debug()
+{
+    std::cout << "Left1: " << (int)this->_leftPin1->get_value();
+    std::cout << "Left2: " << (int)this->_leftPin2->get_value() << std::endl;
+    std::cout << "Right1: " << (int)this->_rightPin1->get_value();
+    std::cout << "Right2: " << (int)this->_rightPin2->get_value() << std::endl;
+}
+
 
 /**
  * Delete any internal objects

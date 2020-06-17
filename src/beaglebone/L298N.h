@@ -5,6 +5,8 @@
 #include <cmath>
 #include <functional>
 
+#include <iostream>
+
 #include "adafruit/bbio/gpio.h"
 #include "adafruit/bbio/pwm.h"
 
@@ -25,6 +27,8 @@ class L298N
 
         // Enable the device
         void enable(bool);
+
+        void debug();
         
         // Destructor
         ~L298N();
