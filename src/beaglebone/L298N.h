@@ -27,8 +27,6 @@ class L298N
 
         // Enable the device
         void enable(bool);
-
-        void debug();
         
         // Destructor
         ~L298N();

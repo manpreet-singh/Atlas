@@ -39,7 +39,6 @@ int main()
                 cout << "Exception caught: "; 
                 cout << e.what() << endl;
             }
-            esc.debug();
         }
         else
             break;
