@@ -7,6 +7,7 @@
 // #include "util/Point2D.h"
 
 #include "beaglebone/L298N.h"
+#include "adafruit/bbio.h"
 
 using namespace std;
 
@@ -18,6 +19,10 @@ int main()
     // testPath.addPoint(util::Point2D(2,1,-5));
     // testPath.generate();
     // cout << "Path Length: " << testPath.getLength() << endl;
+
+    using adafruit::bbio::lib_options;
+
+    adafruit::bbio::init(lib_options(LOG_DEBUG, nullptr, LOG_PERROR));
 
     // Construct the L298N Motor Driver with 4 control pins and 2 PWM pins
     L298N esc("P9_11", "P9_13", "P9_14", "P9_15", "P9_17", "P9_16");
