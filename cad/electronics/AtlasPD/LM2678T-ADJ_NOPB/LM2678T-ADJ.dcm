@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP LM2678T-ADJ
+D IC, STEP-DOWN REGULATOR
+K
+F http://www.ti.com/lit/ds/symlink/lm2678.pdf
+$ENDCMP
+#
+#End Doc Library

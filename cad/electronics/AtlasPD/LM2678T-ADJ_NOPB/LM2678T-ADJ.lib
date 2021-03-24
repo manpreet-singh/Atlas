@@ -1,0 +1,30 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model LM2678T-ADJ
+#/588802/455059/2.49/7/3/Integrated Circuit
+DEF LM2678T-ADJ IC 0 30 Y Y 1 F N
+F0 "IC" 1450 300 50 H V L CNN
+F1 "LM2678T-ADJ" 1450 200 50 H V L CNN
+F2 "TO127P469X1022X2165-7P" 1450 100 50 H I L CNN
+F3 "http://www.ti.com/lit/ds/symlink/lm2678.pdf" 1450 0 50 H I L CNN
+F4 "IC, STEP-DOWN REGULATOR" 1450 -100 50 H I L CNN "Description"
+F5 "4.69" 1450 -200 50 H I L CNN "Height"
+F6 "Texas Instruments" 1450 -300 50 H I L CNN "Manufacturer_Name"
+F7 "LM2678T-ADJ" 1450 -400 50 H I L CNN "Manufacturer_Part_Number"
+F8 "926-LM2678T-ADJ" 1450 -500 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM2678T-ADJ?qs=X1J7HmVL2ZFqoXSXphq8wg%3D%3D" 1450 -600 50 H I L CNN "Mouser Price/Stock"
+F10 "LM2678T-ADJ" 1450 -700 50 H I L CNN "Arrow Part Number"
+F11 "https://www.arrow.com/en/products/lm2678t-adj/texas-instruments" 1450 -800 50 H I L CNN "Arrow Price/Stock"
+DRAW
+X SWITCH_OUTPUT 1 0 0 200 R 50 50 0 0 P
+X INPUT 2 0 -100 200 R 50 50 0 0 P
+X CB 3 0 -200 200 R 50 50 0 0 P
+X GND 4 0 -300 200 R 50 50 0 0 P
+X NC 5 1600 0 200 L 50 50 0 0 N
+X FB 6 1600 -100 200 L 50 50 0 0 P
+X ON/~OFF 7 1600 -200 200 L 50 50 0 0 P
+P 5 0 1 6 200 100 1400 100 1400 -400 200 -400 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library

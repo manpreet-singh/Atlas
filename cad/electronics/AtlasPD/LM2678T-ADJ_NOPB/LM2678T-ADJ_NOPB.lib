@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# LM2678T-ADJ/NOPB
+#
+DEF LM2678T-ADJ/NOPB U 0 40 Y Y 1 L N
+F0 "U" -603 301 50 H V L BNN
+F1 "LM2678T-ADJ/NOPB" -602 -402 50 H V L BNN
+F2 "TO127P1041X469X2199-7N" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+F4 "TEXAS INSTRUMENTS" 0 0 50 H I L BNN "MANUFACTURER"
+DRAW
+S -600 -300 600 300 0 0 10 f
+X SWITCH_OUTPUT 1 700 200 100 L 40 40 0 0 O 
+X INPUT 2 -700 200 100 R 40 40 0 0 I 
+X CB 3 -700 -100 100 R 40 40 0 0 I 
+X GND 4 700 -200 100 L 40 40 0 0 W 
+X ON/~OFF 7 -700 100 100 R 40 40 0 0 I 
+X FB 6 -700 -200 100 R 40 40 0 0 I 
+ENDDRAW
+ENDDEF
+#
+# End Library

@@ -741,11 +741,6 @@
       (net 6 "Net-(R1-Pad2)"))
     (pad 7 thru_hole circle (at 3.81 5.08) (size 1.8 1.8) (drill 1.2) (layers *.Cu *.Mask)
       (net 7 "Net-(U1-Pad7)"))
-    (model ${KIPRJMOD}/LM2678T-ADJ_NOPB/LM2678T-ADJ.stp
-      (offset (xyz -3.75 -5.25 0))
-      (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
-    )
   )
 
   (module Inductor_THT:L_Axial_L6.6mm_D2.7mm_P10.16mm_Horizontal_Vishay_IM-2 (layer F.Cu) (tedit 5AE59B05) (tstamp 605C0BE1)
