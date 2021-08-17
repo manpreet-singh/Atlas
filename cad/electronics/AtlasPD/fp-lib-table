@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name LM2678)(type KiCad)(uri C:/Users/singh/git/Atlas/cad/electronics/AtlasPD/LM2678T-ADJ_NOPB)(options "")(descr ""))
+  (lib (name NUCLEO-L432KC)(type KiCad)(uri ${KIPRJMOD}/NUCLEO-L432KC)(options "")(descr ""))
 )

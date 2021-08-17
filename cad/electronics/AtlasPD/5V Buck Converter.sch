@@ -1,0 +1,299 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title "Atlas Power Distribution Board"
+Date ""
+Rev "0.1"
+Comp ""
+Comment1 "Manpreet Singh"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM2678T-ADJ/NOPB:LM2678T-ADJ_NOPB U1
+U 1 1 60A2CC5E
+P 4000 1900
+F 0 "U1" H 4000 2367 50  0000 C CNN
+F 1 "LM2678T-ADJ_NOPB" H 4000 2276 50  0000 C CNN
+F 2 "LM2678:TO127P1041X469X2199-7N" H 4000 1900 50  0001 L BNN
+F 3 "" H 4000 1900 50  0001 L BNN
+F 4 "TEXAS INSTRUMENTS" H 4000 1900 50  0001 L BNN "MANUFACTURER"
+	1    4000 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 60A2CC64
+P 2450 2100
+F 0 "C2" H 2565 2146 50  0000 L CNN
+F 1 "10uF" H 2565 2055 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2488 1950 50  0001 C CNN
+F 3 "~" H 2450 2100 50  0001 C CNN
+	1    2450 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 60A2CC6A
+P 5950 2150
+F 0 "C4" H 6065 2196 50  0000 L CNN
+F 1 "10uF" H 6065 2105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5988 2000 50  0001 C CNN
+F 3 "~" H 5950 2150 50  0001 C CNN
+	1    5950 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C1
+U 1 1 60A2CC70
+P 2050 2100
+F 0 "C1" H 2165 2146 50  0000 L CNN
+F 1 "220uF" H 2165 2055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 2050 2100 50  0001 C CNN
+F 3 "~" H 2050 2100 50  0001 C CNN
+	1    2050 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP1 C5
+U 1 1 60A2CC76
+P 6300 2150
+F 0 "C5" H 6415 2196 50  0000 L CNN
+F 1 "1000uF" H 6415 2105 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6300 2150 50  0001 C CNN
+F 3 "~" H 6300 2150 50  0001 C CNN
+	1    6300 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:D_Schottky D1
+U 1 1 60A2CC7C
+P 5050 2150
+F 0 "D1" V 5004 2230 50  0000 L CNN
+F 1 "D_Schottky" V 5095 2230 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5050 2150 50  0001 C CNN
+F 3 "~" H 5050 2150 50  0001 C CNN
+	1    5050 2150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 60A2CC82
+P 7250 1950
+F 0 "R1" H 7320 1996 50  0000 L CNN
+F 1 "3.16k" H 7320 1905 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7180 1950 50  0001 C CNN
+F 3 "~" H 7250 1950 50  0001 C CNN
+	1    7250 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60A2CC88
+P 7250 2400
+F 0 "R2" H 7320 2446 50  0000 L CNN
+F 1 "1k" H 7320 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7180 2400 50  0001 C CNN
+F 3 "~" H 7250 2400 50  0001 C CNN
+	1    7250 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 60A2CC8E
+P 1450 1700
+F 0 "J1" H 1558 1881 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 1558 1790 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 1700 50  0001 C CNN
+F 3 "~" H 1450 1700 50  0001 C CNN
+	1    1450 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 60A2CC94
+P 5300 1700
+F 0 "L1" V 5490 1700 50  0000 C CNN
+F 1 "22 uH" V 5399 1700 50  0000 C CNN
+F 2 "Inductor_THT:L_Axial_L6.6mm_D2.7mm_P10.16mm_Horizontal_Vishay_IM-2" H 5300 1700 50  0001 C CNN
+F 3 "~" H 5300 1700 50  0001 C CNN
+	1    5300 1700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1650 1700 2050 1700
+$Comp
+L power:GND #PWR0101
+U 1 1 60A2CC9B
+P 1650 2700
+F 0 "#PWR0101" H 1650 2450 50  0001 C CNN
+F 1 "GND" H 1655 2527 50  0000 C CNN
+F 2 "" H 1650 2700 50  0001 C CNN
+F 3 "" H 1650 2700 50  0001 C CNN
+	1    1650 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 1800 1650 2650
+Wire Wire Line
+	2050 1950 2050 1700
+Connection ~ 2050 1700
+Wire Wire Line
+	2050 1700 2450 1700
+Wire Wire Line
+	2450 1950 2450 1700
+Connection ~ 2450 1700
+Wire Wire Line
+	2450 1700 3300 1700
+Wire Wire Line
+	2050 2250 2050 2650
+Wire Wire Line
+	2050 2650 1650 2650
+Connection ~ 1650 2650
+Wire Wire Line
+	1650 2650 1650 2700
+Wire Wire Line
+	2050 2650 2450 2650
+Wire Wire Line
+	2450 2650 2450 2250
+Connection ~ 2050 2650
+Wire Wire Line
+	4700 2100 4700 2650
+Wire Wire Line
+	4700 2650 2450 2650
+Connection ~ 2450 2650
+Wire Wire Line
+	4700 1700 5050 1700
+Wire Wire Line
+	5450 1700 5950 1700
+Wire Wire Line
+	7250 1700 7250 1800
+Wire Wire Line
+	5950 2000 5950 1700
+Connection ~ 5950 1700
+Wire Wire Line
+	5950 1700 6300 1700
+Wire Wire Line
+	6300 2000 6300 1700
+Connection ~ 6300 1700
+Wire Wire Line
+	6300 1700 7250 1700
+Wire Wire Line
+	5050 2000 5050 1700
+Connection ~ 5050 1700
+Wire Wire Line
+	5050 1700 5150 1700
+Wire Wire Line
+	5050 2300 5050 2650
+Wire Wire Line
+	5050 2650 4700 2650
+Connection ~ 4700 2650
+Wire Wire Line
+	5950 2300 5950 2650
+Wire Wire Line
+	5950 2650 5050 2650
+Connection ~ 5050 2650
+Wire Wire Line
+	6300 2300 6300 2650
+Wire Wire Line
+	6300 2650 5950 2650
+Connection ~ 5950 2650
+Wire Wire Line
+	7250 2550 7250 2650
+Wire Wire Line
+	7250 2650 6300 2650
+Connection ~ 6300 2650
+$Comp
+L Device:C C3
+U 1 1 60A2CCCA
+P 3850 1200
+F 0 "C3" V 3598 1200 50  0000 C CNN
+F 1 "10uF" V 3689 1200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3888 1050 50  0001 C CNN
+F 3 "~" H 3850 1200 50  0001 C CNN
+	1    3850 1200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7250 2200 6950 2200
+Wire Wire Line
+	6950 2200 6950 2400
+Wire Wire Line
+	6950 2400 3300 2400
+Wire Wire Line
+	3300 2400 3300 2100
+Wire Wire Line
+	7250 2100 7250 2200
+Connection ~ 7250 2200
+Wire Wire Line
+	7250 2200 7250 2250
+Wire Wire Line
+	3300 2000 3100 2000
+Wire Wire Line
+	3100 2000 3100 1200
+Wire Wire Line
+	3100 1200 3700 1200
+Wire Wire Line
+	4000 1200 5050 1200
+Wire Wire Line
+	5050 1200 5050 1700
+$Comp
+L Connector:Conn_01x02_Male J2
+U 1 1 60A2CCDC
+P 8700 1800
+F 0 "J2" H 8672 1682 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 8672 1773 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8700 1800 50  0001 C CNN
+F 3 "~" H 8700 1800 50  0001 C CNN
+	1    8700 1800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8500 1800 8500 2650
+$Comp
+L Device:R R3
+U 1 1 60A2CCE3
+P 7800 2400
+F 0 "R3" H 7870 2446 50  0000 L CNN
+F 1 "1k" H 7870 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 7730 2400 50  0001 C CNN
+F 3 "~" H 7800 2400 50  0001 C CNN
+	1    7800 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 60A2CCE9
+P 7800 1950
+F 0 "D2" V 7839 1832 50  0000 R CNN
+F 1 "LED" V 7748 1832 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 7800 1950 50  0001 C CNN
+F 3 "~" H 7800 1950 50  0001 C CNN
+	1    7800 1950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7250 1700 7800 1700
+Wire Wire Line
+	7800 1700 7800 1800
+Connection ~ 7250 1700
+Wire Wire Line
+	7800 1700 8500 1700
+Connection ~ 7800 1700
+Wire Wire Line
+	7800 2100 7800 2250
+Wire Wire Line
+	7800 2550 7800 2650
+Wire Wire Line
+	7800 2650 8500 2650
+Wire Wire Line
+	7800 2650 7250 2650
+Connection ~ 7800 2650
+Connection ~ 7250 2650
+Text Notes 2750 1200 2    118  ~ 24
+5V Buck Converter
+$EndSCHEMATC
