@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name LM2678T-ADJ/NOPB)(type Legacy)(uri C:/Users/singh/git/Atlas/cad/electronics/AtlasPD/LM2678T-ADJ_NOPB/LM2678T-ADJ_NOPB.lib)(options "")(descr ""))
+  (lib (name LM2678T-ADJ/NOPB)(type Legacy)(uri ${KIPRJMOD}/LM2678T-ADJ_NOPB/LM2678T-ADJ_NOPB.lib)(options "")(descr ""))
   (lib (name NUCLEO-L432KC)(type Legacy)(uri ${KIPRJMOD}/NUCLEO-L432KC/NUCLEO-L432KC.lib)(options "")(descr ""))
 )

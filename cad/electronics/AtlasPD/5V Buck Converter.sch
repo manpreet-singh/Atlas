@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 3
+Sheet 2 4
 Title "Atlas Power Distribution Board"
 Date ""
 Rev "0.1"
@@ -282,7 +282,7 @@ Wire Wire Line
 	7800 1700 7800 1800
 Connection ~ 7250 1700
 Wire Wire Line
-	7800 1700 8500 1700
+	7800 1700 8400 1700
 Connection ~ 7800 1700
 Wire Wire Line
 	7800 2100 7800 2250
@@ -296,4 +296,20 @@ Connection ~ 7800 2650
 Connection ~ 7250 2650
 Text Notes 2750 1200 2    118  ~ 24
 5V Buck Converter
+$Comp
+L power:+5V #PWR?
+U 1 1 61270FB8
+P 8400 1500
+F 0 "#PWR?" H 8400 1350 50  0001 C CNN
+F 1 "+5V" H 8415 1673 50  0000 C CNN
+F 2 "" H 8400 1500 50  0001 C CNN
+F 3 "" H 8400 1500 50  0001 C CNN
+	1    8400 1500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8400 1500 8400 1700
+Connection ~ 8400 1700
+Wire Wire Line
+	8400 1700 8500 1700
 $EndSCHEMATC
