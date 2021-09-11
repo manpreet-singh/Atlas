@@ -25,7 +25,7 @@ char base_link[] = "/base_link";
 char odom[] = "/odom";
 
 // State machine modes
-const enum State{READ, RESPOND, EXECUTE};
+enum State{READ, RESPOND, EXECUTE};
 
 // Valid instructions
 // const enum Instruction{};
@@ -47,10 +47,36 @@ void setup() {
     Wire.onRequest(requestEvent);
     pinMode(ledPin, OUTPUT);
     digitalWrite(ledPin, LOW); // turn it off
+
+    nh.initNode();
+    broadcaster.init(nh);
 }
 
 void loop() {
-    delay(100);
+//    delay(100);
+  // drive in a circle
+  double dx = 0.2;
+  double dtheta = 0.18;
+  x += cos(theta)*dx*0.1;
+  y += sin(theta)*dx*0.1;
+  theta += dtheta*0.1;
+  if(theta > 3.14)
+    theta=-3.14;
+    
+  // tf odom->base_link
+  t.header.frame_id = odom;
+  t.child_frame_id = base_link;
+  
+  t.transform.translation.x = x;
+  t.transform.translation.y = y;
+  
+  t.transform.rotation = tf::createQuaternionFromYaw(theta);
+  t.header.stamp = nh.now();
+  
+  broadcaster.sendTransform(t);
+  nh.spinOnce();
+  
+  delay(10);
 }
 
 // function that executes whenever data is received from master
