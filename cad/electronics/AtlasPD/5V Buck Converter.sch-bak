@@ -296,20 +296,13 @@ Connection ~ 7800 2650
 Connection ~ 7250 2650
 Text Notes 2750 1200 2    118  ~ 24
 5V Buck Converter
-$Comp
-L power:+5V #PWR?
-U 1 1 61270FB8
-P 8400 1500
-F 0 "#PWR?" H 8400 1350 50  0001 C CNN
-F 1 "+5V" H 8415 1673 50  0000 C CNN
-F 2 "" H 8400 1500 50  0001 C CNN
-F 3 "" H 8400 1500 50  0001 C CNN
-	1    8400 1500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8400 1500 8400 1700
 Connection ~ 8400 1700
 Wire Wire Line
 	8400 1700 8500 1700
+Text HLabel 8600 1500 2    50   Input ~ 0
+Output
+Wire Wire Line
+	8600 1500 8400 1500
 $EndSCHEMATC

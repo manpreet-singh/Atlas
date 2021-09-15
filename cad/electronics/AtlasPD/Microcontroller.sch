@@ -61,4 +61,44 @@ Wire Wire Line
 	3750 3250 3750 3350
 Wire Wire Line
 	3950 850  3950 1050
+Text HLabel 2700 1650 0    50   Input ~ 0
+IN_1
+Text HLabel 2700 1750 0    50   Input ~ 0
+IN_2
+Text HLabel 2700 1850 0    50   Input ~ 0
+PWM_A
+Text HLabel 2700 1950 0    50   Input ~ 0
+IN_3
+Text HLabel 2700 2050 0    50   Input ~ 0
+IN_4
+Text HLabel 2700 2150 0    50   Input ~ 0
+PWM_B
+Text HLabel 2700 2250 0    50   Input ~ 0
+S1
+Text HLabel 2700 2350 0    50   Input ~ 0
+S2
+Text HLabel 2700 2450 0    50   Input ~ 0
+S3
+Text HLabel 2700 2550 0    50   Input ~ 0
+S4
+Wire Wire Line
+	2700 1650 3250 1650
+Wire Wire Line
+	2700 1750 3250 1750
+Wire Wire Line
+	2700 1850 3250 1850
+Wire Wire Line
+	2700 1950 3250 1950
+Wire Wire Line
+	2700 2050 3250 2050
+Wire Wire Line
+	2700 2150 3250 2150
+Wire Wire Line
+	2700 2250 3250 2250
+Wire Wire Line
+	2700 2350 3250 2350
+Wire Wire Line
+	2700 2450 3250 2450
+Wire Wire Line
+	2700 2550 3250 2550
 $EndSCHEMATC
