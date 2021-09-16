@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\v-singhmanp\git\Atlas\cad\electronics\AtlasPD\AtlasPD.sch</source>
+    <date>9/16/2021 12:35:54 PM</date>
+    <tool>Eeschema (5.1.10)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>AtlasPD.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="2" name="/Sheet60A23886/" tstamps="/60A23887/">
+      <title_block>
+        <title>Atlas Power Distribution Board</title>
+        <company/>
+        <rev>0.1</rev>
+        <date/>
+        <source>5V Buck Converter.sch</source>
+        <comment number="1" value="Manpreet Singh"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="3" name="/Sheet60A2E58A/" tstamps="/60A2E58B/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>Microcontroller.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+    <sheet number="4" name="/Motor Driver/" tstamps="/6125CBA9/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>MotorDriver.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="U2">
+      <value>L78L05_SO8</value>
+      <footprint>Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</footprint>
+      <datasheet>http://www.st.com/content/ccc/resource/technical/document/datasheet/15/55/e5/aa/23/5b/43/fd/CD00000446.pdf/files/CD00000446.pdf/jcr:content/translations/en.CD00000446.pdf</datasheet>
+      <libsource lib="Regulator_Linear" part="L78L05_SO8" description="Positive 100mA 30V Linear Regulator, Fixed Output 5V, SO-8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6141FB78</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>LM2678T-ADJ_NOPB</value>
+      <footprint>LM2678:TO127P1041X469X2199-7N</footprint>
+      <fields>
+        <field name="MANUFACTURER">TEXAS INSTRUMENTS</field>
+      </fields>
+      <libsource lib="LM2678T-ADJ/NOPB" part="LM2678T-ADJ_NOPB" description=""/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC5E</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC64</tstamp>
+    </comp>
+    <comp ref="C4">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC6A</tstamp>
+    </comp>
+    <comp ref="C1">
+      <value>220uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP1" description="Polarized capacitor, US symbol"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC70</tstamp>
+    </comp>
+    <comp ref="C5">
+      <value>1000uF</value>
+      <footprint>Capacitor_THT:CP_Radial_D5.0mm_P2.50mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="CP1" description="Polarized capacitor, US symbol"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC76</tstamp>
+    </comp>
+    <comp ref="D1">
+      <value>D_Schottky</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC7C</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>3.16k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC82</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC88</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x02_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC8E</tstamp>
+    </comp>
+    <comp ref="L1">
+      <value>22 uH</value>
+      <footprint>Inductor_SMD:L_TDK_NLV32_3.2x2.5mm</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="L" description="Inductor"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CC94</tstamp>
+    </comp>
+    <comp ref="C3">
+      <value>10uF</value>
+      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CCCA</tstamp>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_01x02_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x02_Male" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CCDC</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>1k</value>
+      <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CCE3</tstamp>
+    </comp>
+    <comp ref="D2">
+      <value>LED</value>
+      <footprint>LED_SMD:LED_0805_2012Metric</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <sheetpath names="/Sheet60A23886/" tstamps="/60A23887/"/>
+      <tstamp>60A2CCE9</tstamp>
+    </comp>
+    <comp ref="A1">
+      <value>Arduino_UNO_R3</value>
+      <footprint>Module:Arduino_UNO_R3</footprint>
+      <datasheet>https://www.arduino.cc/en/Main/arduinoBoardUno</datasheet>
+      <libsource lib="MCU_Module" part="Arduino_UNO_R3" description="Arduino UNO Microcontroller Module, release 3"/>
+      <sheetpath names="/Sheet60A2E58A/" tstamps="/60A2E58B/"/>
+      <tstamp>61273F77</tstamp>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_01x06</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/Motor Driver/" tstamps="/6125CBA9/"/>
+      <tstamp>6125E0E9</tstamp>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_01x06</value>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/Motor Driver/" tstamps="/6125CBA9/"/>
+      <tstamp>6127A362</tstamp>
+    </comp>
+    <comp ref="U3">
+      <value>L298HN</value>
+      <footprint>Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical</footprint>
+      <datasheet>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf</datasheet>
+      <libsource lib="Driver_Motor" part="L298HN" description="Dual full bridge motor driver, up to 46V, 4A, Multiwatt-15"/>
+      <sheetpath names="/Motor Driver/" tstamps="/6125CBA9/"/>
+      <tstamp>6127C4CB</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x02_Male">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C">
+      <description>Unpolarized capacitor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="CP1">
+      <description>Polarized capacitor, US symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>CP_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">CP1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="D_Schottky">
+      <description>Schottky diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>TO-???*</fp>
+        <fp>*_Diode_*</fp>
+        <fp>*SingleDiode*</fp>
+        <fp>D_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">D_Schottky</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="L">
+      <description>Inductor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="LED">
+      <description>Light emitting diode</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>LED*</fp>
+        <fp>LED_SMD:*</fp>
+        <fp>LED_THT:*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">LED</field>
+      </fields>
+      <pins>
+        <pin num="1" name="K" type="passive"/>
+        <pin num="2" name="A" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Driver_Motor" part="L298HN">
+      <description>Dual full bridge motor driver, up to 46V, 4A, Multiwatt-15</description>
+      <docs>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00000240.pdf</docs>
+      <footprints>
+        <fp>TO?220*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">L298HN</field>
+        <field name="Footprint">Package_TO_SOT_THT:TO-220-15_P2.54x2.54mm_StaggerOdd_Lead4.58mm_Vertical</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SENSE_A" type="power_in"/>
+        <pin num="2" name="OUT1" type="output"/>
+        <pin num="3" name="OUT2" type="output"/>
+        <pin num="4" name="Vs" type="power_in"/>
+        <pin num="5" name="IN1" type="input"/>
+        <pin num="6" name="EnA" type="input"/>
+        <pin num="7" name="IN2" type="input"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="Vss" type="power_in"/>
+        <pin num="10" name="IN3" type="input"/>
+        <pin num="11" name="EnB" type="input"/>
+        <pin num="12" name="IN4" type="input"/>
+        <pin num="13" name="OUT3" type="output"/>
+        <pin num="14" name="OUT4" type="output"/>
+        <pin num="15" name="SENSE_B" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="LM2678T-ADJ/NOPB" part="LM2678T-ADJ_NOPB">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">LM2678T-ADJ_NOPB</field>
+        <field name="Footprint">TO127P1041X469X2199-7N</field>
+        <field name="MANUFACTURER">TEXAS INSTRUMENTS</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SWITCH_OUTPUT" type="output"/>
+        <pin num="2" name="INPUT" type="input"/>
+        <pin num="3" name="CB" type="input"/>
+        <pin num="4" name="GND" type="power_in"/>
+        <pin num="6" name="FB" type="input"/>
+        <pin num="7" name="ON/~OFF" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="MCU_Module" part="Arduino_UNO_R3">
+      <description>Arduino UNO Microcontroller Module, release 3</description>
+      <docs>https://www.arduino.cc/en/Main/arduinoBoardUno</docs>
+      <footprints>
+        <fp>Arduino*UNO*R3*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">A</field>
+        <field name="Value">Arduino_UNO_R3</field>
+        <field name="Footprint">Module:Arduino_UNO_R3</field>
+      </fields>
+      <pins>
+        <pin num="1" name="NC" type="NotConnected"/>
+        <pin num="2" name="IOREF" type="output"/>
+        <pin num="3" name="~RESET" type="input"/>
+        <pin num="4" name="3V3" type="power_out"/>
+        <pin num="5" name="+5V" type="power_out"/>
+        <pin num="6" name="GND" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VIN" type="power_in"/>
+        <pin num="9" name="A0" type="BiDi"/>
+        <pin num="10" name="A1" type="BiDi"/>
+        <pin num="11" name="A2" type="BiDi"/>
+        <pin num="12" name="A3" type="BiDi"/>
+        <pin num="13" name="SDA/A4" type="BiDi"/>
+        <pin num="14" name="SCL/A5" type="BiDi"/>
+        <pin num="15" name="D0/RX" type="BiDi"/>
+        <pin num="16" name="D1/TX" type="BiDi"/>
+        <pin num="17" name="D2" type="BiDi"/>
+        <pin num="18" name="D3" type="BiDi"/>
+        <pin num="19" name="D4" type="BiDi"/>
+        <pin num="20" name="D5" type="BiDi"/>
+        <pin num="21" name="D6" type="BiDi"/>
+        <pin num="22" name="D7" type="BiDi"/>
+        <pin num="23" name="D8" type="BiDi"/>
+        <pin num="24" name="D9" type="BiDi"/>
+        <pin num="25" name="D10" type="BiDi"/>
+        <pin num="26" name="D11" type="BiDi"/>
+        <pin num="27" name="D12" type="BiDi"/>
+        <pin num="28" name="D13" type="BiDi"/>
+        <pin num="29" name="GND" type="power_in"/>
+        <pin num="30" name="AREF" type="input"/>
+        <pin num="31" name="SDA/A4" type="BiDi"/>
+        <pin num="32" name="SCL/A5" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="Regulator_Linear" part="MC78L05_SO8">
+      <aliases>
+        <alias>MC78L08_SO8</alias>
+        <alias>MC78L06_SO8</alias>
+        <alias>MC78L12_SO8</alias>
+        <alias>MC78L15_SO8</alias>
+        <alias>MC78L18_SO8</alias>
+        <alias>MC78L24_SO8</alias>
+        <alias>LM78L05_SO8</alias>
+        <alias>LM78L12_SO8</alias>
+        <alias>LM2931-5.0_SO8</alias>
+        <alias>L78L33_SO8</alias>
+        <alias>L78L05_SO8</alias>
+        <alias>L78L06_SO8</alias>
+        <alias>L78L08_SO8</alias>
+        <alias>L78L09_SO8</alias>
+        <alias>L78L10_SO8</alias>
+        <alias>L78L12_SO8</alias>
+        <alias>L78L15_SO8</alias>
+        <alias>L78L18_SO8</alias>
+        <alias>L78L24_SO8</alias>
+      </aliases>
+      <description>Positive 100mA 30V Linear Regulator, Fixed Output 5V, SO-8</description>
+      <docs>https://www.onsemi.com/pub/Collateral/MC78L00A-D.PDF</docs>
+      <footprints>
+        <fp>SOIC*3.9x4.9mm*P1.27mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MC78L05_SO8</field>
+        <field name="Footprint">Package_SO:SOIC-8_3.9x4.9mm_P1.27mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="OUT" type="power_out"/>
+        <pin num="2" name="GND" type="passive"/>
+        <pin num="3" name="GND" type="passive"/>
+        <pin num="4" name="NC" type="NotConnected"/>
+        <pin num="5" name="NC" type="NotConnected"/>
+        <pin num="6" name="GND" type="passive"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="IN" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Driver_Motor">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Driver_Motor.lib</uri>
+    </library>
+    <library logical="LM2678T-ADJ/NOPB">
+      <uri>C:\Users\v-singhmanp\git\Atlas\cad\electronics\AtlasPD/LM2678T-ADJ_NOPB/LM2678T-ADJ_NOPB.lib</uri>
+    </library>
+    <library logical="MCU_Module">
+      <uri>C:\Program Files\KiCad\share\kicad\library/MCU_Module.lib</uri>
+    </library>
+    <library logical="Regulator_Linear">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Regulator_Linear.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="/Motor Driver/IN4">
+      <node ref="U3" pin="12"/>
+      <node ref="A1" pin="21"/>
+    </net>
+    <net code="2" name="/Motor Driver/PWM_B">
+      <node ref="U3" pin="11"/>
+      <node ref="A1" pin="22"/>
+    </net>
+    <net code="3" name="/Motor Driver/S1">
+      <node ref="J3" pin="5"/>
+      <node ref="A1" pin="23"/>
+    </net>
+    <net code="4" name="/Motor Driver/S2">
+      <node ref="J3" pin="6"/>
+      <node ref="A1" pin="24"/>
+    </net>
+    <net code="5" name="/Motor Driver/S3">
+      <node ref="J4" pin="5"/>
+      <node ref="A1" pin="25"/>
+    </net>
+    <net code="6" name="/Motor Driver/S4">
+      <node ref="A1" pin="26"/>
+      <node ref="J4" pin="6"/>
+    </net>
+    <net code="7" name="Net-(U2-Pad4)">
+      <node ref="U2" pin="4"/>
+    </net>
+    <net code="8" name="Net-(U2-Pad5)">
+      <node ref="U2" pin="5"/>
+    </net>
+    <net code="9" name="/Motor Driver/IN1">
+      <node ref="A1" pin="17"/>
+      <node ref="U3" pin="5"/>
+    </net>
+    <net code="10" name="/Sheet60A23886/Output">
+      <node ref="D2" pin="2"/>
+      <node ref="J2" pin="2"/>
+      <node ref="L1" pin="2"/>
+      <node ref="U2" pin="8"/>
+      <node ref="R1" pin="1"/>
+      <node ref="C5" pin="1"/>
+      <node ref="C4" pin="1"/>
+    </net>
+    <net code="11" name="+5V">
+      <node ref="J4" pin="3"/>
+      <node ref="A1" pin="5"/>
+      <node ref="J3" pin="3"/>
+      <node ref="U2" pin="1"/>
+    </net>
+    <net code="12" name="GND">
+      <node ref="J3" pin="4"/>
+      <node ref="U2" pin="3"/>
+      <node ref="U2" pin="6"/>
+      <node ref="A1" pin="6"/>
+      <node ref="A1" pin="7"/>
+      <node ref="U2" pin="2"/>
+      <node ref="C1" pin="2"/>
+      <node ref="J2" pin="1"/>
+      <node ref="R3" pin="2"/>
+      <node ref="J4" pin="4"/>
+      <node ref="U3" pin="8"/>
+      <node ref="R2" pin="2"/>
+      <node ref="U1" pin="4"/>
+      <node ref="A1" pin="29"/>
+      <node ref="C2" pin="2"/>
+      <node ref="C4" pin="2"/>
+      <node ref="C5" pin="2"/>
+      <node ref="D1" pin="2"/>
+      <node ref="U2" pin="7"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="13" name="/Motor Driver/PWM_A">
+      <node ref="A1" pin="19"/>
+      <node ref="U3" pin="6"/>
+    </net>
+    <net code="14" name="/Motor Driver/IN3">
+      <node ref="U3" pin="10"/>
+      <node ref="A1" pin="20"/>
+    </net>
+    <net code="15" name="/Motor Driver/IN2">
+      <node ref="U3" pin="7"/>
+      <node ref="A1" pin="18"/>
+    </net>
+    <net code="16" name="Net-(R1-Pad2)">
+      <node ref="U1" pin="6"/>
+      <node ref="R1" pin="2"/>
+      <node ref="R2" pin="1"/>
+    </net>
+    <net code="17" name="Net-(C3-Pad2)">
+      <node ref="U1" pin="3"/>
+      <node ref="C3" pin="2"/>
+    </net>
+    <net code="18" name="Net-(U1-Pad7)">
+      <node ref="U1" pin="7"/>
+    </net>
+    <net code="19" name="Net-(D2-Pad1)">
+      <node ref="D2" pin="1"/>
+      <node ref="R3" pin="1"/>
+    </net>
+    <net code="20" name="Net-(C1-Pad1)">
+      <node ref="J1" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="21" name="Net-(C3-Pad1)">
+      <node ref="L1" pin="1"/>
+      <node ref="U1" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="C3" pin="1"/>
+    </net>
+    <net code="22" name="Net-(A1-Pad15)">
+      <node ref="A1" pin="15"/>
+    </net>
+    <net code="23" name="Net-(A1-Pad2)">
+      <node ref="A1" pin="2"/>
+    </net>
+    <net code="24" name="Net-(A1-Pad16)">
+      <node ref="A1" pin="16"/>
+    </net>
+    <net code="25" name="Net-(A1-Pad8)">
+      <node ref="A1" pin="8"/>
+    </net>
+    <net code="26" name="Net-(A1-Pad14)">
+      <node ref="A1" pin="14"/>
+    </net>
+    <net code="27" name="Net-(A1-Pad13)">
+      <node ref="A1" pin="13"/>
+    </net>
+    <net code="28" name="Net-(A1-Pad12)">
+      <node ref="A1" pin="12"/>
+    </net>
+    <net code="29" name="Net-(A1-Pad11)">
+      <node ref="A1" pin="11"/>
+    </net>
+    <net code="30" name="Net-(A1-Pad10)">
+      <node ref="A1" pin="10"/>
+    </net>
+    <net code="31" name="Net-(A1-Pad1)">
+      <node ref="A1" pin="1"/>
+    </net>
+    <net code="32" name="Net-(A1-Pad9)">
+      <node ref="A1" pin="9"/>
+    </net>
+    <net code="33" name="Net-(A1-Pad4)">
+      <node ref="A1" pin="4"/>
+    </net>
+    <net code="34" name="Net-(A1-Pad32)">
+      <node ref="A1" pin="32"/>
+    </net>
+    <net code="35" name="Net-(A1-Pad31)">
+      <node ref="A1" pin="31"/>
+    </net>
+    <net code="36" name="Net-(A1-Pad3)">
+      <node ref="A1" pin="3"/>
+    </net>
+    <net code="37" name="Net-(A1-Pad28)">
+      <node ref="A1" pin="28"/>
+    </net>
+    <net code="38" name="Net-(A1-Pad27)">
+      <node ref="A1" pin="27"/>
+    </net>
+    <net code="39" name="Net-(A1-Pad30)">
+      <node ref="A1" pin="30"/>
+    </net>
+    <net code="40" name="Net-(U3-Pad4)">
+      <node ref="U3" pin="4"/>
+    </net>
+    <net code="41" name="Net-(U3-Pad9)">
+      <node ref="U3" pin="9"/>
+    </net>
+    <net code="42" name="/Motor Driver/-M1">
+      <node ref="U3" pin="3"/>
+      <node ref="J3" pin="2"/>
+    </net>
+    <net code="43" name="/Motor Driver/+M1">
+      <node ref="J3" pin="1"/>
+      <node ref="U3" pin="2"/>
+    </net>
+    <net code="44" name="Net-(U3-Pad15)">
+      <node ref="U3" pin="15"/>
+    </net>
+    <net code="45" name="/Motor Driver/-M2">
+      <node ref="U3" pin="14"/>
+      <node ref="J4" pin="2"/>
+    </net>
+    <net code="46" name="/Motor Driver/+M2">
+      <node ref="U3" pin="13"/>
+      <node ref="J4" pin="1"/>
+    </net>
+    <net code="47" name="Net-(U3-Pad1)">
+      <node ref="U3" pin="1"/>
+    </net>
+  </nets>
+</export>
