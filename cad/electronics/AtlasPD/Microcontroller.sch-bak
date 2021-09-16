@@ -14,10 +14,10 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L MCU_Module:Arduino_UNO_R3 A?
+L MCU_Module:Arduino_UNO_R3 A1
 U 1 1 61273F77
 P 3750 2050
-F 0 "A?" H 3250 3100 50  0000 C CNN
+F 0 "A1" H 3250 3100 50  0000 C CNN
 F 1 "Arduino_UNO_R3" H 3250 3000 50  0000 C CNN
 F 2 "Module:Arduino_UNO_R3" H 3750 2050 50  0001 C CIN
 F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 3750 2050 50  0001 C CNN
@@ -25,10 +25,10 @@ F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 3750 2050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR?
+L power:+5V #PWR04
 U 1 1 61275645
 P 3950 850
-F 0 "#PWR?" H 3950 700 50  0001 C CNN
+F 0 "#PWR04" H 3950 700 50  0001 C CNN
 F 1 "+5V" H 3965 1023 50  0000 C CNN
 F 2 "" H 3950 850 50  0001 C CNN
 F 3 "" H 3950 850 50  0001 C CNN
@@ -36,10 +36,10 @@ F 3 "" H 3950 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 61275C13
 P 3750 3350
-F 0 "#PWR?" H 3750 3100 50  0001 C CNN
+F 0 "#PWR03" H 3750 3100 50  0001 C CNN
 F 1 "GND" H 3755 3177 50  0000 C CNN
 F 2 "" H 3750 3350 50  0001 C CNN
 F 3 "" H 3750 3350 50  0001 C CNN

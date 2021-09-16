@@ -119,7 +119,7 @@ U 1 1 60A2CC94
 P 5300 1700
 F 0 "L1" V 5490 1700 50  0000 C CNN
 F 1 "22 uH" V 5399 1700 50  0000 C CNN
-F 2 "Inductor_THT:L_Axial_L6.6mm_D2.7mm_P10.16mm_Horizontal_Vishay_IM-2" H 5300 1700 50  0001 C CNN
+F 2 "Inductor_SMD:L_TDK_NLV32_3.2x2.5mm" H 5300 1700 50  0001 C CNN
 F 3 "~" H 5300 1700 50  0001 C CNN
 	1    5300 1700
 	0    -1   -1   0   
@@ -305,4 +305,5 @@ Text HLabel 8600 1500 2    50   Input ~ 0
 Output
 Wire Wire Line
 	8600 1500 8400 1500
+NoConn ~ 3300 1800
 $EndSCHEMATC
