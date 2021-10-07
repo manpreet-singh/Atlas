@@ -1,4 +1,5 @@
 (fp_lib_table
   (lib (name LM2678)(type KiCad)(uri ${KIPRJMOD}/LM2678T-ADJ_NOPB)(options "")(descr ""))
   (lib (name NUCLEO-L432KC)(type KiCad)(uri ${KIPRJMOD}/NUCLEO-L432KC)(options "")(descr ""))
+  (lib (name SamacSys_Parts)(type KiCad)(uri ${KIPRJMOD}/ProjectLib/SamacSys_Parts.pretty)(options "")(descr ""))
 )

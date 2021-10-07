@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 2 4
+Sheet 4 4
 Title "Atlas Power Distribution Board"
 Date ""
 Rev "0.1"
@@ -64,7 +64,7 @@ U 1 1 60A2CC76
 P 6300 2150
 F 0 "C5" H 6415 2196 50  0000 L CNN
 F 1 "1000uF" H 6415 2105 50  0000 L CNN
-F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 6300 2150 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D10.0mm_P3.50mm" H 6300 2150 50  0001 C CNN
 F 3 "~" H 6300 2150 50  0001 C CNN
 	1    6300 2150
 	1    0    0    -1  
@@ -242,19 +242,6 @@ Wire Wire Line
 Wire Wire Line
 	5050 1200 5050 1700
 $Comp
-L Connector:Conn_01x02_Male J2
-U 1 1 60A2CCDC
-P 8700 1800
-F 0 "J2" H 8672 1682 50  0000 R CNN
-F 1 "Conn_01x02_Male" H 8672 1773 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8700 1800 50  0001 C CNN
-F 3 "~" H 8700 1800 50  0001 C CNN
-	1    8700 1800
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	8500 1800 8500 2650
-$Comp
 L Device:R R3
 U 1 1 60A2CCE3
 P 7800 2400
@@ -282,28 +269,94 @@ Wire Wire Line
 	7800 1700 7800 1800
 Connection ~ 7250 1700
 Wire Wire Line
-	7800 1700 8400 1700
-Connection ~ 7800 1700
-Wire Wire Line
 	7800 2100 7800 2250
 Wire Wire Line
 	7800 2550 7800 2650
 Wire Wire Line
-	7800 2650 8500 2650
-Wire Wire Line
 	7800 2650 7250 2650
-Connection ~ 7800 2650
 Connection ~ 7250 2650
 Text Notes 2750 1200 2    118  ~ 24
 5V Buck Converter
-Wire Wire Line
-	8400 1500 8400 1700
-Connection ~ 8400 1700
-Wire Wire Line
-	8400 1700 8500 1700
-Text HLabel 8600 1500 2    50   Input ~ 0
-Output
-Wire Wire Line
-	8600 1500 8400 1500
 NoConn ~ 3300 1800
+$Comp
+L power:+5V #PWR0102
+U 1 1 615F3821
+P 7800 1600
+F 0 "#PWR0102" H 7800 1450 50  0001 C CNN
+F 1 "+5V" H 7815 1773 50  0000 C CNN
+F 2 "" H 7800 1600 50  0001 C CNN
+F 3 "" H 7800 1600 50  0001 C CNN
+	1    7800 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1600 7800 1700
+Connection ~ 7800 1700
+$Comp
+L Regulator_Linear:AMS1117-3.3 U5
+U 1 1 616268E3
+P 2150 4200
+F 0 "U5" H 2150 4442 50  0000 C CNN
+F 1 "AMS1117-3.3" H 2150 4351 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-223-3_TabPin2" H 2150 4400 50  0001 C CNN
+F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 2250 3950 50  0001 C CNN
+	1    2150 4200
+	1    0    0    -1  
+$EndComp
+Text Notes 1350 3450 0    118  ~ 24
+3.3V LDO
+$Comp
+L power:+5V #PWR015
+U 1 1 6162A464
+P 1700 3800
+F 0 "#PWR015" H 1700 3650 50  0001 C CNN
+F 1 "+5V" H 1715 3973 50  0000 C CNN
+F 2 "" H 1700 3800 50  0001 C CNN
+F 3 "" H 1700 3800 50  0001 C CNN
+	1    1700 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR017
+U 1 1 6162B28C
+P 2550 3800
+F 0 "#PWR017" H 2550 3650 50  0001 C CNN
+F 1 "+3.3V" H 2565 3973 50  0000 C CNN
+F 2 "" H 2550 3800 50  0001 C CNN
+F 3 "" H 2550 3800 50  0001 C CNN
+	1    2550 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 6162B9AF
+P 2150 4550
+F 0 "#PWR016" H 2150 4300 50  0001 C CNN
+F 1 "GND" H 2155 4377 50  0000 C CNN
+F 2 "" H 2150 4550 50  0001 C CNN
+F 3 "" H 2150 4550 50  0001 C CNN
+	1    2150 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 4200 1850 4200
+Wire Wire Line
+	2450 4200 2550 4200
+Wire Wire Line
+	2550 4200 2550 4100
+Wire Wire Line
+	2150 4500 2150 4550
+$Comp
+L Device:C C8
+U 1 1 6163B27F
+P 2550 3950
+F 0 "C8" H 2665 3996 50  0000 L CNN
+F 1 "10uF" H 2665 3905 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2588 3800 50  0001 C CNN
+F 3 "~" H 2550 3950 50  0001 C CNN
+	1    2550 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 3800 1700 4200
 $EndSCHEMATC
