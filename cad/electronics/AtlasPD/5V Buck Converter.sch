@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 4
-Title "Atlas Power Distribution Board"
-Date ""
-Rev "0.1"
+Title "Atlas Power Board"
+Date "2021-10-08"
+Rev "0.2"
 Comp ""
 Comment1 "Manpreet Singh"
 Comment2 ""
@@ -103,17 +103,6 @@ F 3 "~" H 7250 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J1
-U 1 1 60A2CC8E
-P 1450 1700
-F 0 "J1" H 1558 1881 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 1558 1790 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 1450 1700 50  0001 C CNN
-F 3 "~" H 1450 1700 50  0001 C CNN
-	1    1450 1700
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:L L1
 U 1 1 60A2CC94
 P 5300 1700
@@ -124,8 +113,6 @@ F 3 "~" H 5300 1700 50  0001 C CNN
 	1    5300 1700
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	1650 1700 2050 1700
 $Comp
 L power:GND #PWR0101
 U 1 1 60A2CC9B
@@ -137,8 +124,6 @@ F 3 "" H 1650 2700 50  0001 C CNN
 	1    1650 2700
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	1650 1800 1650 2650
 Wire Wire Line
 	2050 1950 2050 1700
 Connection ~ 2050 1700
@@ -153,7 +138,6 @@ Wire Wire Line
 	2050 2250 2050 2650
 Wire Wire Line
 	2050 2650 1650 2650
-Connection ~ 1650 2650
 Wire Wire Line
 	1650 2650 1650 2700
 Wire Wire Line
@@ -359,4 +343,49 @@ F 3 "~" H 2550 3950 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1700 3800 1700 4200
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 61621A89
+P 1050 2050
+F 0 "BT1" H 1168 2146 50  0000 L CNN
+F 1 "Battery_Cell" H 1168 2055 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 1050 2110 50  0001 C CNN
+F 3 "~" V 1050 2110 50  0001 C CNN
+	1    1050 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery_Cell BT2
+U 1 1 616223C5
+P 1050 2350
+F 0 "BT2" H 1168 2446 50  0000 L CNN
+F 1 "Battery_Cell" H 1168 2355 50  0000 L CNN
+F 2 "Battery:BatteryHolder_Keystone_1042_1x18650" V 1050 2410 50  0001 C CNN
+F 3 "~" V 1050 2410 50  0001 C CNN
+	1    1050 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1850 1050 1700
+Wire Wire Line
+	1050 1700 2050 1700
+Wire Wire Line
+	1050 2450 1050 2650
+Wire Wire Line
+	1050 2650 1650 2650
+Connection ~ 1650 2650
+$Comp
+L power:+BATT #PWR?
+U 1 1 616386ED
+P 1050 1550
+F 0 "#PWR?" H 1050 1400 50  0001 C CNN
+F 1 "+BATT" H 1065 1723 50  0000 C CNN
+F 2 "" H 1050 1550 50  0001 C CNN
+F 3 "" H 1050 1550 50  0001 C CNN
+	1    1050 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1050 1550 1050 1700
+Connection ~ 1050 1700
 $EndSCHEMATC

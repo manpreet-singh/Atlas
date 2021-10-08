@@ -12,4 +12,10 @@ K
 F https://www.murata.com/en-eu/products/productdata/8801162231838/SPEC-CSTNE16M0V530000R0.pdf?1519875007000
 $ENDCMP
 #
+$CMP 1042
+D Cylindrical Battery Contacts, Clips, Holders & Springs 18650 S/M PC BATTERY HOLDER
+K
+F 
+$ENDCMP
+#
 #End Doc Library

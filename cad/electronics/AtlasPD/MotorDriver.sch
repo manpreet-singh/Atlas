@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 3 4
-Title ""
-Date ""
-Rev ""
+Title "Motor Driver Board"
+Date "2021-10-08"
+Rev "0.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -19,7 +19,7 @@ U 1 1 6125E0E9
 P 7900 1950
 F 0 "J3" H 7980 1942 50  0000 L CNN
 F 1 "Conn_01x06" H 7980 1851 50  0000 L CNN
-F 2 "" H 7900 1950 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical" H 7900 1950 50  0001 C CNN
 F 3 "~" H 7900 1950 50  0001 C CNN
 	1    7900 1950
 	1    0    0    -1  
@@ -72,7 +72,7 @@ U 1 1 6127A362
 P 7900 2800
 F 0 "J4" H 7980 2792 50  0000 L CNN
 F 1 "Conn_01x06" H 7980 2701 50  0000 L CNN
-F 2 "" H 7900 2800 50  0001 C CNN
+F 2 "Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical" H 7900 2800 50  0001 C CNN
 F 3 "~" H 7900 2800 50  0001 C CNN
 	1    7900 2800
 	1    0    0    -1  
@@ -309,4 +309,72 @@ Wire Wire Line
 	1100 1600 1100 1700
 Wire Wire Line
 	1100 2700 1100 2850
+Text Label 5200 1100 0    50   ~ 0
++M1
+Text Label 5200 1700 0    50   ~ 0
+-M1
+Text Label 5200 2800 0    50   ~ 0
++M2
+Text Label 5200 3400 0    50   ~ 0
+-M2
+Wire Wire Line
+	5050 1100 5200 1100
+Wire Wire Line
+	5050 1700 5200 1700
+Wire Wire Line
+	5050 2800 5200 2800
+Wire Wire Line
+	5050 3400 5200 3400
+$Comp
+L power:VCC #PWR?
+U 1 1 6163AB7D
+P 4000 700
+F 0 "#PWR?" H 4000 550 50  0001 C CNN
+F 1 "VCC" H 4015 873 50  0000 C CNN
+F 2 "" H 4000 700 50  0001 C CNN
+F 3 "" H 4000 700 50  0001 C CNN
+	1    4000 700 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+BATT #PWR?
+U 1 1 6163C3B1
+P 4250 700
+F 0 "#PWR?" H 4250 550 50  0001 C CNN
+F 1 "+BATT" H 4265 873 50  0000 C CNN
+F 2 "" H 4250 700 50  0001 C CNN
+F 3 "" H 4250 700 50  0001 C CNN
+	1    4250 700 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 700  4250 750 
+Wire Wire Line
+	4250 750  4650 750 
+Wire Wire Line
+	4650 750  4650 900 
+Wire Wire Line
+	4000 700  4000 800 
+Wire Wire Line
+	4000 800  4100 800 
+Wire Wire Line
+	4550 800  4550 900 
+Wire Wire Line
+	4100 800  4100 2500
+Wire Wire Line
+	4100 2500 4550 2500
+Wire Wire Line
+	4550 2500 4550 2600
+Connection ~ 4100 800 
+Wire Wire Line
+	4100 800  4550 800 
+Wire Wire Line
+	4250 750  4200 750 
+Wire Wire Line
+	4200 750  4200 2400
+Wire Wire Line
+	4200 2400 4650 2400
+Wire Wire Line
+	4650 2400 4650 2600
+Connection ~ 4250 750 
 $EndSCHEMATC
