@@ -185,4 +185,26 @@ Wire Wire Line
 	4850 3150 4850 3000
 NoConn ~ 4550 3000
 NoConn ~ 4650 3000
+$Comp
+L Driver_Motor:DRV8837C U?
+U 1 1 61623F54
+P 1700 4100
+F 0 "U?" H 1700 3511 50  0000 C CNN
+F 1 "DRV8837C" H 1700 3420 50  0000 C CNN
+F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" H 1700 3250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/drv8837c.pdf" H 1700 4100 50  0001 C CNN
+	1    1700 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Driver_Motor:DRV8837C U?
+U 1 1 6162467C
+P 3400 4100
+F 0 "U?" H 3400 3511 50  0000 C CNN
+F 1 "DRV8837C" H 3400 3420 50  0000 C CNN
+F 2 "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm" H 3400 3250 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/drv8837c.pdf" H 3400 4100 50  0001 C CNN
+	1    3400 4100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
