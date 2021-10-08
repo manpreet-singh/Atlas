@@ -37,10 +37,6 @@ F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 1500 19
 $EndComp
 NoConn ~ 1050 2800
 Wire Wire Line
-	1950 1800 2100 1800
-Wire Wire Line
-	2100 1800 2100 1900
-Wire Wire Line
 	2100 1900 1950 1900
 Wire Wire Line
 	1950 2000 2100 2000
@@ -48,13 +44,10 @@ Wire Wire Line
 	2100 2000 2100 2100
 Wire Wire Line
 	2100 2100 1950 2100
-Text Label 2450 1800 2    50   ~ 0
+Text Label 2750 1800 2    50   ~ 0
 USB_DN
 Text Label 2450 2000 2    50   ~ 0
 USB_DP
-Wire Wire Line
-	2450 1800 2100 1800
-Connection ~ 2100 1800
 Wire Wire Line
 	2450 2000 2100 2000
 Connection ~ 2100 2000
@@ -91,49 +84,45 @@ NoConn ~ 1950 2500
 $Comp
 L Device:R_Small R5
 U 1 1 6160033E
-P 2300 1600
-F 0 "R5" V 2300 1600 50  0000 C CNN
-F 1 "5.11K" V 2350 1800 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 2300 1600 50  0001 C CNN
-F 3 "~" H 2300 1600 50  0001 C CNN
-	1    2300 1600
+P 2550 1600
+F 0 "R5" V 2550 1600 50  0000 C CNN
+F 1 "5.11K" V 2600 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 1600 50  0001 C CNN
+F 3 "~" H 2550 1600 50  0001 C CNN
+	1    2550 1600
 	0    1    1    0   
 $EndComp
 $Comp
 L Device:R_Small R4
 U 1 1 61600F72
-P 2300 1500
-F 0 "R4" V 2300 1500 50  0000 C CNN
-F 1 "5.11K" V 2250 1700 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric" H 2300 1500 50  0001 C CNN
-F 3 "~" H 2300 1500 50  0001 C CNN
-	1    2300 1500
+P 2550 1500
+F 0 "R4" V 2550 1500 50  0000 C CNN
+F 1 "5.11K" V 2500 1700 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2550 1500 50  0001 C CNN
+F 3 "~" H 2550 1500 50  0001 C CNN
+	1    2550 1500
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	1950 1500 2200 1500
+	2650 1600 2900 1600
 Wire Wire Line
-	1950 1600 2200 1600
+	2900 1600 2900 1500
 Wire Wire Line
-	2400 1600 2650 1600
-Wire Wire Line
-	2650 1600 2650 1500
-Wire Wire Line
-	2650 1500 2400 1500
+	2900 1500 2650 1500
 $Comp
 L power:GND #PWR010
 U 1 1 616032B8
-P 2650 1650
-F 0 "#PWR010" H 2650 1400 50  0001 C CNN
-F 1 "GND" H 2655 1477 50  0000 C CNN
-F 2 "" H 2650 1650 50  0001 C CNN
-F 3 "" H 2650 1650 50  0001 C CNN
-	1    2650 1650
+P 2900 1650
+F 0 "#PWR010" H 2900 1400 50  0001 C CNN
+F 1 "GND" H 2905 1477 50  0000 C CNN
+F 2 "" H 2900 1650 50  0001 C CNN
+F 3 "" H 2900 1650 50  0001 C CNN
+	1    2900 1650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2650 1650 2650 1600
-Connection ~ 2650 1600
+	2900 1650 2900 1600
+Connection ~ 2900 1600
 NoConn ~ 5100 1000
 NoConn ~ 4200 2300
 NoConn ~ 4200 2400
@@ -344,7 +333,7 @@ DTR
 Text Label 5900 1800 2    50   ~ 0
 TXD
 Text Label 5900 1900 2    50   ~ 0
-TXD
+RXD
 Wire Wire Line
 	5600 1500 5900 1500
 Wire Wire Line
@@ -555,17 +544,6 @@ Wire Wire Line
 Wire Wire Line
 	8650 1550 8800 1550
 $Comp
-L Switch:SW_MEC_5E SW1
-U 1 1 616F3B46
-P 10350 3050
-F 0 "SW1" H 10350 3100 50  0000 C CNN
-F 1 "SW_MEC_5E" H 10750 3200 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 10350 3350 50  0001 C CNN
-F 3 "http://www.apem.com/int/index.php?controller=attachment&id_attachment=1371" H 10350 3350 50  0001 C CNN
-	1    10350 3050
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:Resonator_Small Y1
 U 1 1 616F5A36
 P 9750 2150
@@ -576,8 +554,6 @@ F 3 "~" H 9725 2150 50  0001 C CNN
 	1    9750 2150
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	8700 2250 9650 2250
 Wire Wire Line
 	8650 2150 9550 2150
 Wire Wire Line
@@ -597,11 +573,6 @@ F 3 "" H 10700 3050 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	10550 3050 10700 3050
-Wire Wire Line
-	10550 2950 10700 2950
-Wire Wire Line
-	10700 2950 10700 3050
-Connection ~ 10700 3050
 $Comp
 L Device:R_Small R11
 U 1 1 6170B714
@@ -613,13 +584,6 @@ F 3 "~" H 9650 2800 50  0001 C CNN
 	1    9650 2800
 	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	10150 2950 10050 2950
-Wire Wire Line
-	10050 2950 10050 3050
-Connection ~ 10050 3050
-Wire Wire Line
-	10050 3050 10150 3050
 $Comp
 L Device:C_Small C11
 U 1 1 617187A2
@@ -634,8 +598,6 @@ $EndComp
 Wire Wire Line
 	9850 2900 9850 3050
 Connection ~ 9850 3050
-Wire Wire Line
-	9850 3050 10050 3050
 Wire Wire Line
 	9650 2900 9650 3050
 Connection ~ 9650 3050
@@ -859,4 +821,43 @@ Wire Wire Line
 	8250 950  8250 1000
 Wire Wire Line
 	8250 1200 8250 1250
+$Comp
+L Switch:SW_SPST SW1
+U 1 1 61815A6D
+P 10350 3050
+F 0 "SW1" H 10350 3000 50  0000 C CNN
+F 1 "SW_SPST" H 10350 3194 50  0000 C CNN
+F 2 "Button_Switch_SMD:SW_Push_1P1T_NO_6x6mm_H9.5mm" H 10350 3050 50  0001 C CNN
+F 3 "~" H 10350 3050 50  0001 C CNN
+	1    10350 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 3050 10150 3050
+$Comp
+L Device:R_Small R12
+U 1 1 6182599D
+P 2200 1900
+F 0 "R12" V 2200 1900 50  0000 C CNN
+F 1 "0" V 2150 1800 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 2200 1900 50  0001 C CNN
+F 3 "~" H 2200 1900 50  0001 C CNN
+	1    2200 1900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1950 1800 2450 1800
+Wire Wire Line
+	2300 1900 2450 1900
+Wire Wire Line
+	2450 1900 2450 1800
+Wire Wire Line
+	2450 1800 2750 1800
+Connection ~ 2450 1800
+Wire Wire Line
+	1950 1500 2450 1500
+Wire Wire Line
+	1950 1600 2450 1600
+Wire Wire Line
+	8650 2250 9650 2250
 $EndSCHEMATC
