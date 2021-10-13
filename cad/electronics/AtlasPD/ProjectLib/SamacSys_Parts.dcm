@@ -18,4 +18,10 @@ K
 F 
 $ENDCMP
 #
+$CMP LM2678S-5.0_NOPB
+D SIMPLE SWITCHER 8V to 40V, 5A High Efficiency Step-Down DC/DC Switching Regulator
+K
+F 
+$ENDCMP
+#
 #End Doc Library

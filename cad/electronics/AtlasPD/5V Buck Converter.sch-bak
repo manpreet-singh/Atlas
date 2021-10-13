@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 1 1
 Title "Atlas Power Board"
 Date "2021-10-08"
 Rev "0.2"
@@ -287,7 +287,7 @@ F 3 "http://www.advanced-monolithic.com/pdf/ds1117.pdf" H 2250 3950 50  0001 C C
 	1    2150 4200
 	1    0    0    -1  
 $EndComp
-Text Notes 1350 3450 0    118  ~ 24
+Text Notes 1100 3450 0    118  ~ 24
 3.3V LDO
 $Comp
 L power:+5V #PWR015
@@ -327,18 +327,16 @@ Wire Wire Line
 Wire Wire Line
 	2450 4200 2550 4200
 Wire Wire Line
-	2550 4200 2550 4100
-Wire Wire Line
 	2150 4500 2150 4550
 $Comp
 L Device:C C8
 U 1 1 6163B27F
-P 2550 3950
-F 0 "C8" H 2665 3996 50  0000 L CNN
-F 1 "10uF" H 2665 3905 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0603_1608Metric" H 2588 3800 50  0001 C CNN
-F 3 "~" H 2550 3950 50  0001 C CNN
-	1    2550 3950
+P 2550 4350
+F 0 "C8" H 2665 4396 50  0000 L CNN
+F 1 "10uF" H 2665 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 2588 4200 50  0001 C CNN
+F 3 "~" H 2550 4350 50  0001 C CNN
+	1    2550 4350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -388,4 +386,27 @@ $EndComp
 Wire Wire Line
 	1050 1550 1050 1700
 Connection ~ 1050 1700
+Connection ~ 2550 4200
+Wire Wire Line
+	2550 3800 2550 4200
+Wire Wire Line
+	2550 4500 2150 4500
+Connection ~ 2150 4500
+$Comp
+L SamacSys_Parts:LM2678S-5.0_NOPB IC?
+U 1 1 61677FF4
+P 3550 3000
+F 0 "IC?" H 4350 3265 50  0000 C CNN
+F 1 "LM2678S-5.0_NOPB" H 4350 3174 50  0000 C CNN
+F 2 "TO127P1435X464-8N" H 5000 3100 50  0001 L CNN
+F 3 "" H 5000 3000 50  0001 L CNN
+F 4 "SIMPLE SWITCHER 8V to 40V, 5A High Efficiency Step-Down DC/DC Switching Regulator" H 5000 2900 50  0001 L CNN "Description"
+F 5 "4.64" H 5000 2800 50  0001 L CNN "Height"
+F 6 "926-LM2678S-5.0/NOPB" H 5000 2700 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM2678S-50-NOPB?qs=X1J7HmVL2ZEIcu2ww8kGrA%3D%3D" H 5000 2600 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Texas Instruments" H 5000 2500 50  0001 L CNN "Manufacturer_Name"
+F 9 "LM2678S-5.0/NOPB" H 5000 2400 50  0001 L CNN "Manufacturer_Part_Number"
+	1    3550 3000
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
