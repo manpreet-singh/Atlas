@@ -979,4 +979,106 @@ Connection ~ 8800 1200
 Wire Wire Line
 	8800 1200 8650 1200
 NoConn ~ 1050 2800
+$Comp
+L Connector:TestPoint_Alt TP1
+U 1 1 617127E7
+P 10000 3650
+F 0 "TP1" H 10058 3722 50  0000 L CNN
+F 1 "TestPoint_Alt" H 10058 3677 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10200 3650 50  0001 C CNN
+F 3 "~" H 10200 3650 50  0001 C CNN
+	1    10000 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Alt TP2
+U 1 1 61713F79
+P 10100 3650
+F 0 "TP2" H 10158 3722 50  0000 L CNN
+F 1 "TestPoint_Alt" H 10158 3677 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10300 3650 50  0001 C CNN
+F 3 "~" H 10300 3650 50  0001 C CNN
+	1    10100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Alt TP3
+U 1 1 61714148
+P 10200 3650
+F 0 "TP3" H 10258 3722 50  0000 L CNN
+F 1 "TestPoint_Alt" H 10258 3677 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10400 3650 50  0001 C CNN
+F 3 "~" H 10400 3650 50  0001 C CNN
+	1    10200 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Alt TP4
+U 1 1 61714471
+P 10300 3650
+F 0 "TP4" H 10358 3722 50  0000 L CNN
+F 1 "TestPoint_Alt" H 10358 3677 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10500 3650 50  0001 C CNN
+F 3 "~" H 10500 3650 50  0001 C CNN
+	1    10300 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Alt TP5
+U 1 1 61714782
+P 10400 3650
+F 0 "TP5" H 10458 3722 50  0000 L CNN
+F 1 "TestPoint_Alt" H 10458 3677 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10600 3650 50  0001 C CNN
+F 3 "~" H 10600 3650 50  0001 C CNN
+	1    10400 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint_Alt TP6
+U 1 1 617149A7
+P 10500 3650
+F 0 "TP6" H 10558 3722 50  0000 L CNN
+F 1 "TestPoint_Alt" H 10558 3677 50  0001 L CNN
+F 2 "TestPoint:TestPoint_Pad_D1.0mm" H 10700 3650 50  0001 C CNN
+F 3 "~" H 10700 3650 50  0001 C CNN
+	1    10500 3650
+	1    0    0    -1  
+$EndComp
+Text Label 10800 4200 0    50   ~ 0
+AD5_SCL
+Text Label 10800 4100 0    50   ~ 0
+AD4_SDA
+Text Label 10800 4000 0    50   ~ 0
+AD3
+Text Label 10800 3900 0    50   ~ 0
+AD2
+Text Label 10800 3800 0    50   ~ 0
+AD1
+Text Label 10800 3700 0    50   ~ 0
+AD0
+Wire Wire Line
+	10500 3650 10500 3700
+Wire Wire Line
+	10500 3700 10800 3700
+Wire Wire Line
+	10400 3650 10400 3800
+Wire Wire Line
+	10400 3800 10800 3800
+Wire Wire Line
+	10300 3650 10300 3900
+Wire Wire Line
+	10300 3900 10800 3900
+Wire Wire Line
+	10200 4000 10200 3650
+Wire Wire Line
+	10200 4000 10800 4000
+Wire Wire Line
+	10100 3650 10100 4100
+Wire Wire Line
+	10100 4100 10800 4100
+Wire Wire Line
+	10000 4200 10000 3650
+Wire Wire Line
+	10000 4200 10800 4200
 $EndSCHEMATC
