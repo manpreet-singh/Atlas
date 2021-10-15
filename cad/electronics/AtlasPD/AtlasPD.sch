@@ -28,6 +28,7 @@ F8 "S1" I R 8050 2200 50
 F9 "S2" I R 8050 2300 50 
 F10 "S3" I R 8050 2400 50 
 F11 "S4" I R 8050 2500 50 
+F12 "EN_MTRS" I R 8050 1100 50 
 $EndSheet
 $Sheet
 S 9100 950  650  1800
@@ -82,4 +83,10 @@ Text Notes 8100 2700 0    50   ~ 0
 Encoder Feedback Signals\nFrom both motors
 Text Notes 8100 2900 0    50   ~ 0
 S1/S2: Motor 1\nS3/S4: Motor 2
+Wire Wire Line
+	8050 1100 8550 1100
+Wire Wire Line
+	8550 1100 8550 1000
+Wire Wire Line
+	8550 1000 9100 1000
 $EndSCHEMATC
