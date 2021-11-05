@@ -1,4 +1,4 @@
-# Atas Robot Platform
+# Atlas Robot Platform
 
 Table of Contents
 
