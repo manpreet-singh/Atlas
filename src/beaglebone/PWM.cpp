@@ -60,7 +60,7 @@ void PWM::setFrequency(int frequency)
  * Set the duty cycle of the PWM signal
  * @param dutyCycle Percentage value between 0 and 1
  */
-void PWM::setDutyCycle(int dutyCycle)
+void PWM::setDutyCycle(double dutyCycle)
 {
     if (dutyCycle > 0 && dutyCycle < 1)
     {

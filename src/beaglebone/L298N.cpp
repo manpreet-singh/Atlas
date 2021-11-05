@@ -9,6 +9,8 @@
  */
 L298N::L298N(std::string left1, std::string left2, std::string pwmLeft, std::string right1, std::string right2, std::string pwmRight)
 {
+
+    #if USE_ADAFRUIT_LIB == 1
     this->_leftPin1 = new adafruit::bbio::Gpio(left1, adafruit::bbio::Gpio::Direction::Output);
     this->_leftPin2 = new adafruit::bbio::Gpio(left2, adafruit::bbio::Gpio::Direction::Output);
   	this->_leftPWM = new adafruit::bbio::Pwm(pwmLeft);
@@ -18,6 +20,25 @@ L298N::L298N(std::string left1, std::string left2, std::string pwmLeft, std::str
     this->_rightPin2 = new adafruit::bbio::Gpio(right2, adafruit::bbio::Gpio::Direction::Output);
 	this->_rightPWM = new adafruit::bbio::Pwm(pwmRight);
     this->_rightPWM->start(0.0F, (float)PWM_FREQ, adafruit::bbio::Pwm::Polarity::Normal);
+
+    #else
+    
+    this->_leftPin1 = new GPIO(left1);
+    this->_leftPin2 = new GPIO(left2);
+
+    this->_rightPin1 = new GPIO(right1);
+    this->_rightPin1 = new GPIO(right2);
+
+    this->_leftPWM = new PWM(pwmLeft);
+    this->_rightPWM = new PWM(pwmRight);
+
+    this->_leftPin1->pinMode(GPIO::OUTPUT);
+    this->_leftPin2->pinMode(GPIO::OUTPUT);
+
+    this->_rightPin1->pinMode(GPIO::OUTPUT);
+    this->_rightPin2->pinMode(GPIO::OUTPUT);
+
+    #endif
 }
 
 /**
@@ -53,18 +74,32 @@ void L298N::setLeftSpeed(double speed)
 {
     if (speed > 0)
     {
+        #if USE_ADAFRUIT_LIB == 1
         this->_leftPin1->set_value(adafruit::bbio::Gpio::Value::High);
         this->_leftPin2->set_value(adafruit::bbio::Gpio::Value::Low);
+        #else
+        this->_leftPin1->setPin(1);
+        this->_leftPin2->setPin(0);
+        #endif
     } 
     else
     {
+        #if USE_ADAFRUIT_LIB == 1
         this->_leftPin1->set_value(adafruit::bbio::Gpio::Value::Low);
         this->_leftPin2->set_value(adafruit::bbio::Gpio::Value::High);
+        #else
+        this->_leftPin1->setPin(0);
+        this->_leftPin2->setPin(1);
+        #endif
     }
 
     double dutyCycleFactor = (speed + 1)/2;
 
+    #if USE_ADAFRUIT_LIB == 1
     this->_leftPWM->set_duty_cycle(100*dutyCycleFactor);
+    #else
+    this->_leftPWM->setDutyCycle(dutyCycleFactor);
+    #endif
 }
 
 /**
@@ -75,18 +110,32 @@ void L298N::setRightSpeed(double speed)
 {
     if (speed > 0)
     {
+        #if USE_ADAFRUIT_LIB == 1
         this->_rightPin1->set_value(adafruit::bbio::Gpio::Value::High);
         this->_rightPin2->set_value(adafruit::bbio::Gpio::Value::Low);
+        #else
+        this->_rightPin1->setPin(1);
+        this->_rightPin2->setPin(0);
+        #endif
     } 
     else
     {
+        #if USE_ADAFRUIT_LIB == 1
         this->_rightPin1->set_value(adafruit::bbio::Gpio::Value::Low);
         this->_rightPin2->set_value(adafruit::bbio::Gpio::Value::High);
+        #else
+        this->_rightPin1->setPin(0);
+        this->_rightPin2->setPin(1);
+        #endif
     }
 	
 	double dutyCycleFactor = (speed + 1)/2;
 	
+    #if USE_ADAFRUIT_LIB == 1
     this->_rightPWM->set_duty_cycle(100*dutyCycleFactor);
+    #else
+    this->_rightPWM->setDutyCycle(dutyCycleFactor);
+    #endif
 }
 
 /**
@@ -94,11 +143,15 @@ void L298N::setRightSpeed(double speed)
  */
 L298N::~L298N()
 {
+
+    #if USE_ADAFRUIT_LIB == 1
     this->_leftPWM->stop();
     this->_leftPWM->~Pwm();
 
     this->_rightPWM->stop();
     this->_rightPWM->~Pwm();
+    #endif
+
 
     delete _leftPin1;
     delete _leftPin2;

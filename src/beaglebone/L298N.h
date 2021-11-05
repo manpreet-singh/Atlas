@@ -7,10 +7,21 @@
 
 #include <iostream>
 
+#define PWM_FREQ 1000
+
+#define USE_ADAFRUIT_LIB 0
+
+#if USE_ADAFRUIT_LIB == 1
+
 #include "adafruit/bbio/gpio.h"
 #include "adafruit/bbio/pwm.h"
 
-#define PWM_FREQ 1000
+#else
+
+#include "beaglebone/GPIO.h"
+#include "beaglebone/PWM.h"
+
+#endif
 
 /**
  * L298N Dual motor H-Bridge controller driver.
@@ -32,6 +43,7 @@ class L298N
         ~L298N();
     private:
 
+        #if USE_ADAFRUIT_LIB == 1
         adafruit::bbio::Gpio * _leftPin1;
         adafruit::bbio::Gpio * _leftPin2;
 
@@ -40,6 +52,19 @@ class L298N
 
         adafruit::bbio::Pwm * _leftPWM;
         adafruit::bbio::Pwm * _rightPWM;
+        
+        #else
+
+        GPIO * _leftPin1;
+        GPIO * _leftPin2;
+
+        GPIO * _rightPin1;
+        GPIO * _rightPin2;
+
+        PWM * _leftPWM;
+        PWM * _rightPWM;
+
+        #endif
 
         void setLeftSpeed(double);
         void setRightSpeed(double);

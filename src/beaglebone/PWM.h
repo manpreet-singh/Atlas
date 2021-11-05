@@ -6,8 +6,6 @@
 #include <fstream>
 #include <iostream>
 
-#define __DEPRECATED 1
-
 /**
  * PWM Class to access the different PWM chips on the BBB
  * @author Manpreet Singh 2020
@@ -18,7 +16,7 @@ class PWM
 		PWM(std::string);
 
 		void setFrequency(int);
-		void setDutyCycle(int);
+		void setDutyCycle(double);
 
 		void enable();
 		void disable();
