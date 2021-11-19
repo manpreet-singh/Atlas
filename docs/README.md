@@ -3,9 +3,10 @@
 Table of Contents
 
 * Overview
-* Mechanical Design
-* Hardware Design
+* Electrical Design
 * Software Design
+* Mechanical Design
+
 ---
 
 ## Overview
@@ -19,19 +20,13 @@ The purpose of this project is to bring together Mechcanical, Electrical, and So
 
 ---
 
-## Mechcanical Design
-
-### Overview
-
-### Wheel Base
-
-### Robot Arm
-
----
-
 ## Electrical Design
 
+The electrical design of this robot consists of a custom battery board and a MCU driver board with motor controllers. 
+
 ### Custom Power solution
+
+The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V for system use. A buck step down converter is used to drop the 7.5V down to 5V for MCU power. 
 
 ### Custom MCU solution
 
@@ -44,3 +39,13 @@ The purpose of this project is to bring together Mechcanical, Electrical, and So
 ### Basic Communication pipeline
 
 ### ROS
+
+---
+
+## Mechcanical Design
+
+### Overview
+
+### Wheel Base
+
+### Robot Arm
