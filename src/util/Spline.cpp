@@ -1,5 +1,4 @@
-#include "Spline.h"
-
+#include "util/Spline.h"
 
 using namespace std;
 using namespace util;
