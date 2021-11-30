@@ -1151,12 +1151,12 @@ ICSP Header
 Text Notes 10000 4300 0    50   Italic 10
 Unused MCU pins
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J?
+L Connector_Generic:Conn_02x03_Odd_Even J1
 U 1 1 61A6FF2A
 P 1650 7100
-F 0 "J?" H 1700 7400 50  0000 C CNN
+F 0 "J1" H 1700 7400 50  0000 C CNN
 F 1 "Conn_02x03_Odd_Even" H 1700 7550 50  0000 C CNN
-F 2 "" H 1650 7100 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 1650 7100 50  0001 C CNN
 F 3 "~" H 1650 7100 50  0001 C CNN
 	1    1650 7100
 	1    0    0    -1  
