@@ -3,11 +3,11 @@
 #include <cmath>
 // #include <unistd.h>
 
-// #include "util/Path.h"
-// #include "util/Point2D.h"
+#include "util/Path.h"
+#include "util/Point2D.h"
 
 #include "beaglebone/L298N.h"
-#include "adafruit/bbio.h"
+// #include "adafruit/bbio.h"
 
 using namespace std;
 
