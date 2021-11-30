@@ -76,7 +76,7 @@ ISR(PCINT0_vect)
     }
     if (mask & S2)
     {
-         if (enc1 == IDLE)
+        if (enc1 == IDLE)
             enc1 = DECREMENT;
         else if (enc1 == INCREMENT)
         {
@@ -93,7 +93,7 @@ ISR(PCINT0_vect)
         else if (enc1 == DECREMENT)
         {
             enc2_count--;
-            enc2 = IDLE:
+            enc2 = IDLE;
         }
     }
 
@@ -112,12 +112,9 @@ ISR(PCINT0_vect)
 void loop() {
     // put your main code here, to run repeatedly:
     if (Serial.available() > 0 ) {
-        String val = Serial.readString();
-        Serial.print("Setting value to: ");
-        Serial.println(val);
-        int num = val.toInt();
-        Serial.println(num);
-        //    Serial.write("\n");
-        analogWrite(PWM_A, num);
+        int val = Serial.read();
+        analogWrite(PWM_A, val);
     }
+    Serial.write(enc1_count);
+    Serial.write(enc2_count);
 }
