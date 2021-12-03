@@ -3,7 +3,7 @@ EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 4 4
+Sheet 1 1
 Title "Atlas Power Board"
 Date "2021-10-08"
 Rev "0.2"
@@ -451,4 +451,10 @@ F 3 "" H 4450 4300 50  0001 C CNN
 $EndComp
 Text Notes 3900 3450 0    118  ~ 24
 Power Output Connector
+Text Label 6550 2400 0    50   ~ 0
+FEEDBACK
+Text Label 5050 1200 0    50   ~ 0
+SWITCH_OUT
+Text Label 3100 1200 0    50   ~ 0
+CB
 $EndSCHEMATC
