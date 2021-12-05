@@ -3,10 +3,10 @@
 #include <cmath>
 // #include <unistd.h>
 
-#include "util/Path.h"
-#include "util/Point2D.h"
+// #include "util/Path.h"
+// #include "util/Point2D.h"
 
-#include "beaglebone/L298N.h"
+// #include "beaglebone/L298N.h"
 // #include "adafruit/bbio.h"
 
 using namespace std;
@@ -20,34 +20,36 @@ int main()
     // testPath.generate();
     // cout << "Path Length: " << testPath.getLength() << endl;
 
-    using adafruit::bbio::lib_options;
+    // using adafruit::bbio::lib_options;
 
-    adafruit::bbio::init(lib_options(LOG_DEBUG, nullptr, LOG_PERROR));
+    // adafruit::bbio::init(lib_options(LOG_DEBUG, nullptr, LOG_PERROR));
 
-    // Construct the L298N Motor Driver with 4 control pins and 2 PWM pins
-    L298N esc("P9_11", "P9_13", "P9_14", "P9_15", "P9_17", "P9_16");
-    esc.enable(true);
-    double speed;
+    // // Construct the L298N Motor Driver with 4 control pins and 2 PWM pins
+    // L298N esc("P9_11", "P9_13", "P9_14", "P9_15", "P9_17", "P9_16");
+    // esc.enable(true);
+    // double speed;
 
-    while (1) 
-    {
-        cout << "Enter motor speeds between -1 and 1 : ";
-        cin >> speed;
-        if (abs(speed) <= 1)
-        {
-            try 
-            {
-                esc.setMotors(speed, speed);
-            }
-            catch (exception& e)
-            {
-                cout << "Exception caught: "; 
-                cout << e.what() << endl;
-            }
-        }
-        else
-            break;
-    }
+    // while (1) 
+    // {
+    //     cout << "Enter motor speeds between -1 and 1 : ";
+    //     cin >> speed;
+    //     if (abs(speed) <= 1)
+    //     {
+    //         try 
+    //         {
+    //             esc.setMotors(speed, speed);
+    //         }
+    //         catch (exception& e)
+    //         {
+    //             cout << "Exception caught: "; 
+    //             cout << e.what() << endl;
+    //         }
+    //     }
+    //     else
+    //         break;
+    // }
+
+    cout << "Helllo World" << endl;
 
     return EXIT_SUCCESS;
 }
