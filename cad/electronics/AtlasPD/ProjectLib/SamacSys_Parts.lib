@@ -1,35 +1,47 @@
-EESchema-LIBRARY Version 2.3
+EESchema-LIBRARY Version 2.4
 #encoding utf-8
-#SamacSys ECAD Model NE555DR
-#/6648/2/2.37/8/4/Integrated Circuit
-DEF NE555DR IC 0 30 Y Y 1 F N
-F0 "IC" 1050 600 50 H V L CNN
-F1 "NE555DR" 1050 500 50 H V L CNN
-F2 "SOIC127P600X175-8N" 1050 400 50 H I L CNN
-F3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" 1050 300 50 H I L CNN
-F4 "Single Precision Timer" 1050 200 50 H I L CNN "Description"
-F5 "1.75" 1050 100 50 H I L CNN "Height"
-F6 "Texas Instruments" 1050 0 50 H I L CNN "Manufacturer_Name"
-F7 "NE555DR" 1050 -100 50 H I L CNN "Manufacturer_Part_Number"
-F8 "595-NE555DR" 1050 -200 50 H I L CNN "Mouser Part Number"
-F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-NE555DR" 1050 -300 50 H I L CNN "Mouser Price/Stock"
-F10 "1218414" 1050 -400 50 H I L CNN "RS Part Number"
-F11 "http//uk.rs-online.com/web/p/products/1218414" 1050 -500 50 H I L CNN "RS Price/Stock"
+#
+# 1042
+#
+DEF 1042 U 0 30 Y Y 1 F N
+F0 "U" 750 300 50 H V L CNN
+F1 "1042" 750 200 50 H V L CNN
+F2 "KEYSTONE-1042" 750 100 50 H I L CNN
+F3 "" 750 0 50 H I L CNN
+F4 "Cylindrical Battery Contacts, Clips, Holders & Springs 18650 S/M PC BATTERY HOLDER" 750 -100 50 H I L CNN "Description"
+F5 "534-1042" 750 -300 50 H I L CNN "Mouser Part Number"
+F6 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/1042?qs=%2F7TOpeL5Mz4qPdWi9tuLKw%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
+F7 "Keystone Electronics" 750 -500 50 H I L CNN "Manufacturer_Name"
+F8 "1042" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
 DRAW
-X GND 1 600 -1000 200 U 50 50 0 0 B
-X TRIG 2 0 -400 200 R 50 50 0 0 B
-X OUT 3 1200 -200 200 L 50 50 0 0 B
-X ~RESET 4 0 0 200 R 50 50 0 0 B
-X CONT 5 500 600 200 D 50 50 0 0 B
-X THRES 6 0 -300 200 R 50 50 0 0 B
-X DISCH 7 0 -100 200 R 50 50 0 0 B
-X VCC 8 700 600 200 D 50 50 0 0 B
-P 5 0 1 6 200 400 1000 400 1000 -800 200 -800 200 400 N
+P 5 0 1 6 200 100 700 100 700 -200 200 -200 200 100 N
+X NEG 1 0 0 200 R 50 50 0 0 P
+X POS 2 0 -100 200 R 50 50 0 0 P
 ENDDRAW
 ENDDEF
 #
-#SamacSys ECAD Model CSTNE16M0V530000R0
-#/1217385/625459/2.49/3/4/Undefined or Miscellaneous
+# AP1509
+#
+DEF AP1509 U 0 40 Y Y 1 F N
+F0 "U" 190 340 50 H V C CNN
+F1 "AP1509" -290 -370 50 H V C CNN
+F2 "" -230 70 50 H I C CNN
+F3 "" -230 70 50 H I C CNN
+DRAW
+S -500 300 400 -300 0 1 0 f
+X Vin 1 -600 200 100 R 50 50 1 1 I
+X SW 2 500 200 100 L 50 50 1 1 O
+X FB 3 -50 400 100 D 50 50 1 1 I
+X SD 4 -600 -200 100 R 50 50 1 1 I
+X GND 5 0 -400 100 U 50 50 1 1 I
+X GND 6 100 -400 100 U 50 50 1 1 I
+X GND 7 200 -400 100 U 50 50 1 1 I
+X GND 8 300 -400 100 U 50 50 1 1 I
+ENDDRAW
+ENDDEF
+#
+# CSTNE16M0V530000R0
+#
 DEF CSTNE16M0V530000R0 U 0 30 Y Y 1 F N
 F0 "U" 850 300 50 H V L CNN
 F1 "CSTNE16M0V530000R0" 850 200 50 H V L CNN
@@ -44,35 +56,15 @@ F9 "https://www.mouser.co.uk/ProductDetail/Murata-Electronics/CSTNE16M0V530000R0
 F10 "CSTNE16M0V530000R0" 850 -700 50 H I L CNN "Arrow Part Number"
 F11 "https://www.arrow.com/en/products/cstne16m0v530000r0/murata-manufacturing?region=europe" 850 -800 50 H I L CNN "Arrow Price/Stock"
 DRAW
+P 5 0 1 6 200 100 800 100 800 -300 200 -300 200 100 N
 X INPUT 1 0 0 200 R 50 50 0 0 P
 X GND 2 0 -100 200 R 50 50 0 0 P
 X OUTPUT 3 0 -200 200 R 50 50 0 0 P
-P 5 0 1 6 200 100 800 100 800 -300 200 -300 200 100 N
 ENDDRAW
 ENDDEF
 #
-#SamacSys ECAD Model 1042
-#/246324/625459/2.49/2/3/Undefined or Miscellaneous
-DEF 1042 U 0 30 Y Y 1 F N
-F0 "U" 750 300 50 H V L CNN
-F1 "1042" 750 200 50 H V L CNN
-F2 "KEYSTONE-1042" 750 100 50 H I L CNN
-F3 "" 750 0 50 H I L CNN
-F4 "Cylindrical Battery Contacts, Clips, Holders & Springs 18650 S/M PC BATTERY HOLDER" 750 -100 50 H I L CNN "Description"
-F5 "" 750 -200 50 H I L CNN "Height"
-F6 "534-1042" 750 -300 50 H I L CNN "Mouser Part Number"
-F7 "https://www.mouser.co.uk/ProductDetail/Keystone-Electronics/1042?qs=%2F7TOpeL5Mz4qPdWi9tuLKw%3D%3D" 750 -400 50 H I L CNN "Mouser Price/Stock"
-F8 "Keystone Electronics" 750 -500 50 H I L CNN "Manufacturer_Name"
-F9 "1042" 750 -600 50 H I L CNN "Manufacturer_Part_Number"
-DRAW
-X NEG 1 0 0 200 R 50 50 0 0 P
-X POS 2 0 -100 200 R 50 50 0 0 P
-P 5 0 1 6 200 100 700 100 700 -200 200 -200 200 100 N
-ENDDRAW
-ENDDEF
+# LM2678S-5.0_NOPB
 #
-#SamacSys ECAD Model LM2678S-5.0_NOPB
-#/155477/625459/2.49/8/3/Integrated Circuit
 DEF LM2678S-5.0_NOPB IC 0 30 Y Y 1 F N
 F0 "IC" 1450 300 50 H V L CNN
 F1 "LM2678S-5.0_NOPB" 1450 200 50 H V L CNN
@@ -85,6 +77,7 @@ F7 "https://www.mouser.co.uk/ProductDetail/Texas-Instruments/LM2678S-50-NOPB?qs=
 F8 "Texas Instruments" 1450 -500 50 H I L CNN "Manufacturer_Name"
 F9 "LM2678S-5.0/NOPB" 1450 -600 50 H I L CNN "Manufacturer_Part_Number"
 DRAW
+P 5 0 1 6 200 100 1400 100 1400 -700 200 -700 200 100 N
 X SW_OUTPUT 1 0 0 200 R 50 50 0 0 O
 X INPUT 2 0 -100 200 R 50 50 0 0 I
 X C_BOOST 3 0 -200 200 R 50 50 0 0 P
@@ -93,7 +86,34 @@ X NC 5 0 -400 200 R 50 50 0 0 N
 X FB 6 0 -500 200 R 50 50 0 0 P
 X ON/~OFF 7 0 -600 200 R 50 50 0 0 P
 X GND_(TAB) 8 1600 0 200 L 50 50 0 0 W
-P 5 0 1 6 200 100 1400 100 1400 -700 200 -700 200 100 N
+ENDDRAW
+ENDDEF
+#
+# NE555DR
+#
+DEF NE555DR IC 0 30 Y Y 1 F N
+F0 "IC" 1050 600 50 H V L CNN
+F1 "NE555DR" 1050 500 50 H V L CNN
+F2 "SOIC127P600X175-8N" 1050 400 50 H I L CNN
+F3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" 1050 300 50 H I L CNN
+F4 "Single Precision Timer" 1050 200 50 H I L CNN "Description"
+F5 "1.75" 1050 100 50 H I L CNN "Height"
+F6 "Texas Instruments" 1050 0 50 H I L CNN "Manufacturer_Name"
+F7 "NE555DR" 1050 -100 50 H I L CNN "Manufacturer_Part_Number"
+F8 "595-NE555DR" 1050 -200 50 H I L CNN "Mouser Part Number"
+F9 "https://www.mouser.com/Search/Refine.aspx?Keyword=595-NE555DR" 1050 -300 50 H I L CNN "Mouser Price/Stock"
+F10 "1218414" 1050 -400 50 H I L CNN "RS Part Number"
+F11 "http//uk.rs-online.com/web/p/products/1218414" 1050 -500 50 H I L CNN "RS Price/Stock"
+DRAW
+P 5 0 1 6 200 400 1000 400 1000 -800 200 -800 200 400 N
+X GND 1 600 -1000 200 U 50 50 0 0 B
+X TRIG 2 0 -400 200 R 50 50 0 0 B
+X OUT 3 1200 -200 200 L 50 50 0 0 B
+X ~RESET 4 0 0 200 R 50 50 0 0 B
+X CONT 5 500 600 200 D 50 50 0 0 B
+X THRES 6 0 -300 200 R 50 50 0 0 B
+X DISCH 7 0 -100 200 R 50 50 0 0 B
+X VCC 8 700 600 200 D 50 50 0 0 B
 ENDDRAW
 ENDDEF
 #
