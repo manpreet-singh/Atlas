@@ -1,4 +1,4 @@
-#include "PWM.h"
+#include "beaglebone/PWM.h"
 
 PWM::PWM(std::string chip) : _pwm_chip(chip)
 {

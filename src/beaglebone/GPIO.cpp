@@ -1,4 +1,4 @@
-#include "GPIO.h"
+#include "beaglebone/GPIO.h"
 
 GPIO::GPIO(std::string pin) : _pin(pin)
 {

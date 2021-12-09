@@ -1,4 +1,4 @@
-#include "L298N.h"
+#include "beaglebone/L298N.h"
 
 /**
  * Construct the L298N H-Bridge driver
