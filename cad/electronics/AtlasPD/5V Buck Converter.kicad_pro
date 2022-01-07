@@ -337,7 +337,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "SamacSys_Parts"
+    ]
   },
   "meta": {
     "filename": "5V Buck Converter.kicad_pro",
@@ -419,7 +421,7 @@
   },
   "sheets": [
     [
-      "4a4ec8d9-3d72-4952-83d4-808f65849a2b",
+      "84e5a9a2-8b13-4f25-9865-8ecd395bae95",
       ""
     ]
   ],

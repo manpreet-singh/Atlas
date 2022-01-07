@@ -1,6 +1,6 @@
 (sym_lib_table
-  (lib (name LM2678T-ADJ/NOPB)(type Legacy)(uri ${KIPRJMOD}/LM2678T-ADJ_NOPB/LM2678T-ADJ_NOPB.lib)(options "")(descr ""))
-  (lib (name NUCLEO-L432KC)(type Legacy)(uri ${KIPRJMOD}/NUCLEO-L432KC/NUCLEO-L432KC.lib)(options "")(descr ""))
-  (lib (name SamacSys_Parts)(type Legacy)(uri ${KIPRJMOD}/ProjectLib/SamacSys_Parts.lib)(options "")(descr ""))
-  (lib (name AtlasPD-rescue)(type Legacy)(uri ${KIPRJMOD}/AtlasPD-rescue.lib)(options "")(descr ""))
+  (lib (name "LM2678T-ADJ{slash}NOPB")(type "Legacy")(uri "${KIPRJMOD}/LM2678T-ADJ_NOPB/LM2678T-ADJ_NOPB.lib")(options "")(descr ""))
+  (lib (name "NUCLEO-L432KC")(type "Legacy")(uri "${KIPRJMOD}/NUCLEO-L432KC/NUCLEO-L432KC.lib")(options "")(descr ""))
+  (lib (name "SamacSys_Parts")(type "KiCad")(uri "${KIPRJMOD}/ProjectLib/SamacSys_Parts.kicad_sym")(options "")(descr ""))
+  (lib (name "AtlasPD-rescue")(type "Legacy")(uri "${KIPRJMOD}/AtlasPD-rescue.lib")(options "")(descr ""))
 )
