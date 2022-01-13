@@ -1787,7 +1787,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 364540f7-0c58-4618-8ce3-bea6d054cb4e)
   )
-  (label "SRC" (at 80.01 41.91 0)
+  (label "Q_SRC" (at 80.01 41.91 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5a58d39a-2ec3-4ef0-abec-6ec66d1cf4f2)
   )
