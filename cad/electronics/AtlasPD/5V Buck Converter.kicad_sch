@@ -2381,8 +2381,8 @@
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 57171975-0c61-495a-bb3b-6550cc5d5f7f)
     (property "Reference" "R406" (id 0) (at 80.01 95.3475 90))
-    (property "Value" "RSNS" (id 1) (at 80.01 98.1226 90))
-    (property "Footprint" "Resistor_SMD:R_0805_2012Metric" (id 2) (at 80.01 102.108 90)
+    (property "Value" "20m" (id 1) (at 80.01 98.1226 90))
+    (property "Footprint" "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm" (id 2) (at 80.01 102.108 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 80.01 100.33 0)
@@ -2715,7 +2715,7 @@
       (reference "R405") (unit 1) (value "470") (footprint "Resistor_SMD:R_0805_2012Metric")
     )
     (path "/57171975-0c61-495a-bb3b-6550cc5d5f7f"
-      (reference "R406") (unit 1) (value "RSNS") (footprint "Resistor_SMD:R_0805_2012Metric")
+      (reference "R406") (unit 1) (value "20m") (footprint "Resistor_THT:R_Box_L13.0mm_W4.0mm_P9.00mm")
     )
     (path "/96081f1f-4df0-4ce6-bcbe-894b4af08efa"
       (reference "R407") (unit 1) (value "1k") (footprint "Resistor_SMD:R_0805_2012Metric")
