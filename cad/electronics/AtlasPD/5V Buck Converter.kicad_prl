@@ -65,7 +65,7 @@
       36
     ],
     "visible_layers": "ffcfeff_ffffffff",
-    "zone_display_mode": 0
+    "zone_display_mode": 1
   },
   "meta": {
     "filename": "5V Buck Converter.kicad_prl",
