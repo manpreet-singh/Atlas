@@ -389,8 +389,8 @@
       "idf": "",
       "netlist": "5V Buck Converter.net",
       "specctra_dsn": "",
-      "step": "",
-      "vrml": ""
+      "step": "Battery Board.step",
+      "vrml": "Battery Board.wrl"
     },
     "page_layout_descr_file": ""
   },
