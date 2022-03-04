@@ -1,4 +1,5 @@
 #include <Arduino.h>
+#include <DS2778.h>
 
 // Motor control pins
 #define PWM_A 4 // Motor 1 PWM
