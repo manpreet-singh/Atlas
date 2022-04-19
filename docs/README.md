@@ -28,7 +28,12 @@ The electrical design of this robot consists of a custom battery board and a MCU
 
 The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V for system use. A buck step down converter is used to drop the 7.5V down to 5V for MCU power. 
 
+![Power Board with Fuel Gauge and 5V Buck](./cad/electronics/AtlasPD/BB.svg)
+<img src="./cad/electronics/AtlasPD/BB.svg">
+
 ### Custom MCU solution
+
+This is being held back by the current global IC Shortage, unable to source components for MCU and its supporting components/ICs.
 
 ---
 
