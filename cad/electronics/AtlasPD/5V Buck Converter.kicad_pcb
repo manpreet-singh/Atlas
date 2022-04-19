@@ -3304,6 +3304,11 @@
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
+    (model "${KICAD6_3DMODEL_DIR}/Battery.3dshapes/BatteryHolder_Keystone_1042_1x18650.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
   )
 
   (footprint "Battery:BatteryHolder_Keystone_1042_1x18650" (layer "B.Cu")
@@ -3362,6 +3367,11 @@
     (pad "2" smd rect locked (at 39.33 0) (size 7.34 6.35) (layers "B.Cu" "B.Paste" "B.Mask")
       (net 8 "GNDPWR") (pinfunction "-") (pintype "passive") (zone_connect 2) (tstamp 29256b3d-9450-4c0a-a4d4-911f04b9c140))
     (model "${KISYS3DMOD}/Battery.3dshapes/BatteryHolder_Keystone_1042_1x18650.wrl"
+      (offset (xyz 0 0 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 0 0 0))
+    )
+    (model "${KICAD6_3DMODEL_DIR}/Battery.3dshapes/BatteryHolder_Keystone_1042_1x18650.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
