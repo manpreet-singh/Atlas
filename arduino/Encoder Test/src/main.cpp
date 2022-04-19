@@ -1,5 +1,9 @@
 #include <Arduino.h>
 #include <DS2778.h>
+#include <stdint.h>
+
+// Helper Macro
+#define MASK(x) ((unsigned char) (1<<(x)))
 
 // Motor control pins
 #define PWM_A 4 // Motor 1 PWM

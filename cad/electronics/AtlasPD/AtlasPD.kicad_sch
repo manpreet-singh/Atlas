@@ -568,6 +568,12 @@
     (path "/00000000-0000-0000-0000-000060a2e58b/00000000-0000-0000-0000-0000617149a7"
       (reference "TP206") (unit 1) (value "TestPoint_Alt") (footprint "TestPoint:TestPoint_Pad_D1.0mm")
     )
+    (path "/00000000-0000-0000-0000-000060a23887/91b85650-033e-44b0-a2ed-f5fd30d60c65"
+      (reference "TP401") (unit 1) (value "SDA") (footprint "TestPoint:TestPoint_Pad_1.5x1.5mm")
+    )
+    (path "/00000000-0000-0000-0000-000060a23887/66740f71-9e34-47a2-a510-2716c15f0aab"
+      (reference "TP402") (unit 1) (value "SCL") (footprint "TestPoint:TestPoint_Pad_D1.5mm")
+    )
     (path "/00000000-0000-0000-0000-000060a2e58b/00000000-0000-0000-0000-000061606fdd"
       (reference "U201") (unit 1) (value "CP2104") (footprint "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm")
     )
