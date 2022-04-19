@@ -107,6 +107,8 @@ ISR(PCINT0_vect)
             enc2 = IDLE;
         }
     }
+
+    prev_portb_val = portb_val;
 }
 
 void loop() {
