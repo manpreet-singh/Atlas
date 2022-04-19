@@ -30,9 +30,9 @@ The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V f
 
 ![Power Board with Fuel Gauge and 5V Buck](../cad/electronics/AtlasPD/BB2.png)
 
-![Power Board top perspective view](..\cad\electronics\AtlasPD\photos\battery_board\top_perspective.png)
+![Power Board top perspective view](../cad/electronics/AtlasPD/photos/battery_board/top_perspective.png)
 
-![Power Board bottom perspective view](..\cad\electronics\AtlasPD\photos\battery_board\bottom_perspective.png)
+![Power Board bottom perspective view](../cad/electronics/AtlasPD/photos/battery_board/bottom_perspective.png)
 
 ### Custom MCU solution
 
