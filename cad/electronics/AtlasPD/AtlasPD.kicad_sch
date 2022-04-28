@@ -230,11 +230,24 @@
     )
   )
 
+  (sheet (at 77.216 83.312) (size 33.782 57.658) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid db00ed9d-5cbd-42e1-a367-f32e41a8348a)
+    (property "Sheet name" "Arduino MKR Zero" (id 0) (at 77.216 82.6004 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "ArduinoMKRZero.kicad_sch" (id 1) (at 77.216 141.5546 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
     (path "/00000000-0000-0000-0000-00006125cba9" (page "2"))
     (path "/00000000-0000-0000-0000-000060a23887" (page "3"))
     (path "/00000000-0000-0000-0000-000060a2e58b" (page "4"))
+    (path "/db00ed9d-5cbd-42e1-a367-f32e41a8348a" (page "5"))
   )
 
   (symbol_instances
@@ -609,6 +622,9 @@
     )
     (path "/00000000-0000-0000-0000-000060a23887/393016c3-31b1-4ee8-9320-3dad6db7838f"
       (reference "U402") (unit 1) (value "DS2777") (footprint "SamacSys_Parts:DS2777G+")
+    )
+    (path "/db00ed9d-5cbd-42e1-a367-f32e41a8348a/5d6bfee8-45c2-4914-ad4b-302ee1d5f60e"
+      (reference "U500") (unit 1) (value "Arduino_MKR_Zero") (footprint "SamacSys_Parts:Arduino MKR Zero")
     )
     (path "/00000000-0000-0000-0000-000060a2e58b/00000000-0000-0000-0000-0000616f5a36"
       (reference "Y201") (unit 1) (value "16MHz") (footprint "SamacSys_Parts:CSTNE16M0V530000R0")

@@ -432,6 +432,10 @@
     [
       "00000000-0000-0000-0000-000060a2e58b",
       "Sheet60A2E58A"
+    ],
+    [
+      "db00ed9d-5cbd-42e1-a367-f32e41a8348a",
+      "Arduino MKR Zero"
     ]
   ],
   "text_variables": {}
