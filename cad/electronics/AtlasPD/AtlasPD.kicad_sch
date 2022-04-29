@@ -338,11 +338,17 @@
     (path "/00000000-0000-0000-0000-000060a2e58b/b01cbaf5-cf22-4e73-b185-9f26acda98e6"
       (reference "#PWR0227") (unit 1) (value "+3.3V") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-000061698f37"
-      (reference "#PWR0301") (unit 1) (value "VCC") (footprint "")
+    (path "/00000000-0000-0000-0000-00006125cba9/dabfc510-2539-4b36-a6e3-498340ff47dd"
+      (reference "#PWR0228") (unit 1) (value "VCC") (footprint "")
     )
-    (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-000061660824"
-      (reference "#PWR0302") (unit 1) (value "GND") (footprint "")
+    (path "/00000000-0000-0000-0000-00006125cba9/f8b0b71e-6ed1-4506-9c3b-fd757320d018"
+      (reference "#PWR0229") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00006125cba9/b9a653b9-a451-4df2-aa65-af1ae5e2df04"
+      (reference "#PWR0230") (unit 1) (value "+BATT") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00006125cba9/7b0fcf17-6308-4cc2-9c6e-04620519fc81"
+      (reference "#PWR0231") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-00006163ab7d"
       (reference "#PWR0303") (unit 1) (value "VCC") (footprint "")
@@ -424,6 +430,18 @@
     )
     (path "/00000000-0000-0000-0000-000060a2e58b/a5c682ee-f2ec-4aad-b1e0-5c500720c558"
       (reference "C206") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    )
+    (path "/00000000-0000-0000-0000-00006125cba9/b89235bc-590e-4ca4-b9a4-acf6931e92d6"
+      (reference "C207") (unit 1) (value "10u") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00006125cba9/7003a46a-fac9-4524-b8a4-31ff4e996e2e"
+      (reference "C208") (unit 1) (value "10u") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00006125cba9/4ded3ae1-787f-4e04-8adf-974fdddefecf"
+      (reference "C209") (unit 1) (value "10n") (footprint "")
+    )
+    (path "/00000000-0000-0000-0000-00006125cba9/ae60be2e-e3cd-47b3-b266-e75e92369a1d"
+      (reference "C210") (unit 1) (value "10n") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000060a23887/00000000-0000-0000-0000-000061b15c5a"
       (reference "C401") (unit 1) (value "220uF") (footprint "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm")
@@ -595,21 +613,6 @@
     )
     (path "/00000000-0000-0000-0000-000060a2e58b/e189bd0b-6e93-4ace-8d3a-0e99f85a455b"
       (reference "U203") (unit 1) (value "AMS1117-3.3") (footprint "Package_TO_SOT_SMD:SOT-223-3_TabPin2")
-    )
-    (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-000061640db0"
-      (reference "U301") (unit 1) (value "74LS08") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
-    )
-    (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-0000616444b9"
-      (reference "U301") (unit 2) (value "74LS08") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
-    )
-    (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-0000616454a9"
-      (reference "U301") (unit 3) (value "74LS08") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
-    )
-    (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-000061646528"
-      (reference "U301") (unit 4) (value "74LS08") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
-    )
-    (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-000061647348"
-      (reference "U301") (unit 5) (value "74LS08") (footprint "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm")
     )
     (path "/00000000-0000-0000-0000-00006125cba9/00000000-0000-0000-0000-00006162467c"
       (reference "U302") (unit 1) (value "DRV8837C") (footprint "Package_SON:WSON-8-1EP_2x2mm_P0.5mm_EP0.9x1.6mm")

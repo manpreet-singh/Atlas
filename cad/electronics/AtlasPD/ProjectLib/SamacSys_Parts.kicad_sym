@@ -122,9 +122,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (symbol "Arduino_MKR_Zero_0_1"
-      (rectangle (start -6.985 8.89) (end 6.985 -28.575)
+      (rectangle (start -6.985 8.89) (end 6.985 -27.94)
         (stroke (width 0.1524) (type default) (color 0 0 0 0))
-        (fill (type none))
+        (fill (type background))
       )
     )
     (symbol "Arduino_MKR_Zero_1_1"
