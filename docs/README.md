@@ -14,9 +14,6 @@ Table of Contents
 The Atlas Robot is a small Custom robot designed and built for educational proposes. The Atlas Robot features custom designed Electrical and Mechcanical Hardware featuring 3D printing technology and Embedded systems design. 
 The purpose of this project is to bring together Mechcanical, Electrical, and Software design for my Undergrad Capstone project, but it has since morphed into a single project that soaks up more of my as the project timeline expands eponentially.
 
-> Add more stuff here man, idk 
-
-> Add image of overview of things
 
 ---
 
@@ -38,22 +35,21 @@ The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V f
 
 This is being held back by the current global IC Shortage, unable to source components for MCU and its supporting components/ICs.
 
+The custom MCU will have a IMU on board and supporting hardware for a GPS module for the purposes of localization and navigation.
+
 ---
 
 ## Software Design
 
-### Discrete Filters and Sensors
+The current plan is to put the ROS software tools onto the Custom MCU and have the MCU relay sensor information to a SBC like a Raspberry Pi or a Jetson Nano.
 
-### Basic Communication pipeline
+### Sensors & Filters
 
-### ROS
+### Integration with ROS
 
 ---
 
 ## Mechcanical Design
 
-### Overview
+### Drive Base
 
-### Wheel Base
-
-### Robot Arm
