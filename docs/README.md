@@ -11,8 +11,8 @@ Table of Contents
 
 ## Overview
 
-The Atlas Robot is a small Custom robot designed and built for educational proposes. The Atlas Robot features custom designed Electrical and Mechcanical Hardware featuring 3D printing technology and Embedded systems design. 
-The purpose of this project is to bring together Mechcanical, Electrical, and Software design for my Undergrad Capstone project, but it has since morphed into a single project that soaks up more of my as the project timeline expands eponentially.
+The Atlas Robot is a small custom robot designed and built for educational proposes. The Atlas Robot features custom designed Electrical and Mechcanical Hardware featuring 3D printing technology and Embedded systems design. 
+The original purpose of this project was to bring together Mechcanical, Electrical, and Software design for my Undergrad Capstone project, but it has since morphed into a single project focusing on Embedded systems design that soaks up more of my time as the project timeline expands exponentially.
 
 
 ---
@@ -22,6 +22,8 @@ The purpose of this project is to bring together Mechcanical, Electrical, and So
 The electrical design of this robot consists of a custom battery board and a MCU driver board with motor controllers. 
 
 ### Custom Power solution
+
+Electrical Schematic of the power board can be found here: 
 
 The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V for system use. A buck step down converter is used to drop the 7.5V down to 5V for MCU power. 
 
@@ -33,9 +35,12 @@ The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V f
 
 ### Custom MCU solution
 
-This is being held back by the current global IC Shortage, unable to source components for MCU and its supporting components/ICs.
+The original design of the MCU board is being held back by the neverending global IC Shortage, unable to source components for MCU and its supporting peripherals/ICs.
+
+The original plan was to leverage the ease of the Arduino framework by developing a MCU board using the ATMEGA328P, but those are very difficult to source. The plan has changed to center around the ever so popular STM32 family of Microcontrollers. The current design for the board can be found here: 
 
 The custom MCU will have a IMU on board and supporting hardware for a GPS module for the purposes of localization and navigation.
+
 
 ---
 
