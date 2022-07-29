@@ -80,8 +80,8 @@ struct DS2778
 #include <Arduino.h> // Not guarateed to work on ALL AVR devices
 #include <Wire.h>
 
-//Temporary
-uint8_t device_addr = 0x59;
+
+uint8_t device_addr = 0x59; // Temporary
 
 /**
  * @brief Read 1 byte of data from a specific register
@@ -125,6 +125,48 @@ uint16_t read_2_registers_16bits(TwoWire *i2c, uint8_t msb_addr, uint8_t lsb_add
     uint16_t data = ((msb << 8) | lsb);
 
     return data;
+}
+
+/**
+ * @brief Read the various capacity reporting registers from the DS2778 over I2C
+ * 
+ * @param i2c Point to Wire object ot use for transmission
+ * @param pack DS2778 Data Struct to store information into
+ */
+void read_capacity(TwoWire *i2c, DS2778 pack)
+{
+    pack.active_capacity  = read_2_registers_16bits(i2c, RAAC_MSB, RAAC_LSB);
+    pack.standby_capacity = read_2_registers_16bits(i2c, RSAC_MSB, RSAC_LSB);
+
+    pack.active_capacity_percent  = read_register_8bits(i2c, RARC);
+    pack.standby_capacity_percent = read_register_8bits(i2c, RSRC);
+}
+
+/**
+ * @brief Read the various current reporting registers from the DS2778 over I2C
+ * 
+ * @param i2c Point to Wire object ot use for transmission
+ * @param pack DS2778 Data Struct to store information into
+ */
+void read_current(TwoWire *i2c, DS2778 pack)
+{
+    pack.avg_current  = read_2_registers_16bits(i2c, AVG_CURR_MSB, AVG_CURR_LSB);
+    pack.inst_current = read_2_registers_16bits(i2c, CURR_MSB, CURR_LSB);
+
+    uint16_t temp = read_2_registers_16bits(i2c, ACC_CURR_MSB, ACC_CURR_LSB);
+    pack.acc_current = ((temp << 16) | read_2_registers_16bits(i2c, ACC_CURR_LSB_1, ACC_CURR_LSB_2));
+}
+
+/**
+ * @brief Read the Cell voltage reporting registers from the DS2778 over I2C
+ * 
+ * @param i2c Point to Wire object ot use for transmission
+ * @param pack DS2778 Data Struct to store information into
+ */
+void read_voltage(TwoWire *i2c, DS2778 pack)
+{
+    pack.high_cell_volts  = read_2_registers_16bits(i2c, CELL_HIGH_VOLT_MSB, CELL_HGIH_VOLT_LSB);
+    pack.lower_cell_volts = read_2_registers_16bits(i2c, CELL_LOW_VOLT_MSB,  CELL_LOW_VOLT_LSB);
 }
 
 #endif // __AVR__
