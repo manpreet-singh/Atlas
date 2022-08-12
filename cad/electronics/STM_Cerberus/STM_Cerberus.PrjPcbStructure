@@ -1,0 +1,4 @@
+Record=TopLevelDocument|FileName=MCU_Cerberus.SchDoc|SheetNumber=3
+Record=NoMainPathDocument|SourceDocument=MCU_Cerberus.SchDoc|FileName=MCU_Main.SchDoc|SheetNumber=1
+Record=NoMainPathDocument|SourceDocument=MCU_Cerberus.SchDoc|FileName=MCU_Power.SchDoc|SheetNumber=2
+Record=NoMainPathDocument|SourceDocument=MCU_Cerberus.SchDoc|FileName=MCU_Sensors.SchDoc|SheetNumber=4
