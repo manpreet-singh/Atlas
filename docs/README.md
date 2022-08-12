@@ -44,7 +44,7 @@ Photos of the STM32 based MCU Board:
 
 The Pin out of the Board is the following:
 
-<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/blob/b36709da538c670c03678525e4883a034478b70a/cad/electronics/AtlasMCU_STM32/photos/AtlasMCU_STM_Pinouts.drawio.png">
+<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/b36709da538c670c03678525e4883a034478b70a/cad/electronics/AtlasMCU_STM32/photos/AtlasMCU_STM_Pinouts.drawio.png">
 
 ---
 
