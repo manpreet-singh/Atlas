@@ -31,8 +31,6 @@ The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V f
 
 <img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/d47e119e5d93c1e35f4de9e734c4386765d2ce03/cad/electronics/AtlasPD/photos/battery_board/top_perspective.png">
 
-<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/d47e119e5d93c1e35f4de9e734c4386765d2ce03/cad/electronics/AtlasPD/photos/battery_board/bottom_perspective.png">
-
 ### Custom MCU solution
 
 The original design of the MCU board is being held back by the neverending global IC Shortage, unable to source components for MCU and its supporting peripherals/ICs.
@@ -42,12 +40,11 @@ The original plan was to leverage the ease of the Arduino framework by developin
 The plan has changed to center around the ever so popular STM32 family of Microcontrollers. The future design for the MCU can be found here: [Link to PDF](https://github.com/manpreet-singh/Atlas/blob/b2b3af6c37c7f48b9bfceda13a4e8d811f8669c3/cad/electronics/AtlasMCU_STM32/AtlasMCU_STM32.pdf)
 
 Photos of the STM32 based MCU Board:
-<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/d47e119e5d93c1e35f4de9e734c4386765d2ce03/cad\electronics\AtlasMCU_STM32\photos\IMG_0330.JPEG">
+<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/b36709da538c670c03678525e4883a034478b70a/cad\electronics\AtlasMCU_STM32\photos\IMG_0330.JPEG">
 
 The Pin out of the Board is the following:
 
-<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/d47e119e5d93c1e35f4de9e734c4386765d2ce03/cad\electronics\AtlasMCU_STM32\photos\AtlasMCU_STM_Pinouts.drawio.png">
-
+<img src="https://github.com/manpreet-singh/Atlas/blob/b36709da538c670c03678525e4883a034478b70a/cad/electronics/AtlasMCU_STM32/photos/AtlasMCU_STM_Pinouts.drawio.png">
 
 ---
 
