@@ -5,7 +5,6 @@ Table of Contents
 * Overview
 * Electrical Design
 * Software Design
-* Mechanical Design
 
 ---
 
@@ -65,11 +64,4 @@ The Control Computer on the other hand, only has the bare minimum required hardw
 
 Currently the MCU has a MPU-6050 IMU on board, which features a 3-axis accelerometer and 3-axis gyroscope. The IMU data is currently going through a Kalman filter in order to estimate a better orientation.
 
-### Integration with ROS
-
 ---
-
-## Mechanical Design
-
-### Drive Base
-
