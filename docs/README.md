@@ -30,8 +30,8 @@ The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V f
 
 <img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/d47e119e5d93c1e35f4de9e734c4386765d2ce03/cad/electronics/AtlasPD/photos/battery_board/top_perspective.png">
 
-<img src="https://github.com/manpreet-singh/Atlas/blob/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasPD/photos/battery_board/BatteryBoard1.jpg">
-<img src="https://github.com/manpreet-singh/Atlas/blob/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasPD/photos/battery_board/BatteryBoard.jpg">
+<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasPD/photos/battery_board/BatteryBoard1.jpg">
+<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasPD/photos/battery_board/BatteryBoard.jpg">
 
 ### Custom MCU solution
 
