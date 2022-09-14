@@ -59,7 +59,7 @@ The current plan is to split the system into two distinct computers, the Navgiat
 
 The Control Computer on the other hand, only has the bare minimum required hardware to keep the system stable during flight, its main purpose is to talk direct to the ESCs and the battery board to keep the 
 
-<img src="https://github.com/manpreet-singh/Atlas/blob/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasMCU_STM32/photos/Process%20Diagram.drawio.png">
+<img src="https://github.com/manpreet-singh/Atlas/raw/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasMCU_STM32/photos/Process%20Diagram.drawio.png">
 
 ### Sensors & Filters
 
