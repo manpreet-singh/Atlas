@@ -27,9 +27,12 @@ Electrical Schematic of the power board can be found here: [Link to PDF](https:/
 
 The power solution consists of 2 18650 Li-Ion cells providing a total of ~7.4V for system use. A buck step down converter is used to drop the 7.5V down to 5V for MCU power. 
 
-<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/d47e119e5d93c1e35f4de9e734c4386765d2ce03/cad/electronics/AtlasPD/BB2.png">
+<!-- <img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/d47e119e5d93c1e35f4de9e734c4386765d2ce03/cad/electronics/AtlasPD/BB2.png"> -->
 
 <img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/d47e119e5d93c1e35f4de9e734c4386765d2ce03/cad/electronics/AtlasPD/photos/battery_board/top_perspective.png">
+
+<img src="https://github.com/manpreet-singh/Atlas/blob/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasPD/photos/battery_board/BatteryBoard1.jpg">
+<img src="https://github.com/manpreet-singh/Atlas/blob/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasPD/photos/battery_board/BatteryBoard.jpg">
 
 ### Custom MCU solution
 
@@ -56,7 +59,7 @@ The current plan is to split the system into two distinct computers, the Navgiat
 
 The Control Computer on the other hand, only has the bare minimum required hardware to keep the system stable during flight, its main purpose is to talk direct to the ESCs and the battery board to keep the 
 
-<img src="https://raw.githubusercontent.com/manpreet-singh/Atlas/b36709da538c670c03678525e4883a034478b70a/cad/electronics/AtlasMCU_STM32/photos/Process Diagram.drawio.png">
+<img src="https://github.com/manpreet-singh/Atlas/blob/04827d193eed65f08dce83fdbe8d89d371534a07/cad/electronics/AtlasMCU_STM32/photos/Process%20Diagram.drawio.png">
 
 ### Sensors & Filters
 
