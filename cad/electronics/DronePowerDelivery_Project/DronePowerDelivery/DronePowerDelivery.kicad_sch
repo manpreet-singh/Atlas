@@ -1,0 +1,31 @@
+(kicad_sch (version 20230121) (generator eeschema)
+
+  (uuid db10dbdd-bd7a-4620-b081-6765f0e1b5bf)
+
+  (paper "A4")
+
+  (lib_symbols
+  )
+
+
+  (sheet (at 153.67 55.88) (size 55.88 44.45) (fields_autoplaced)
+    (stroke (width 0.1524) (type solid))
+    (fill (color 0 0 0 0.0000))
+    (uuid 552c461d-5e7e-4fe2-8b93-3d30535f803f)
+    (property "Sheetname" "CellMonitor" (at 153.67 55.1684 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheetfile" "CellMonitor.kicad_sch" (at 153.67 100.9146 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+    (instances
+      (project "DronePowerDelivery"
+        (path "/db10dbdd-bd7a-4620-b081-6765f0e1b5bf" (page "2"))
+      )
+    )
+  )
+
+  (sheet_instances
+    (path "/" (page "1"))
+  )
+)
