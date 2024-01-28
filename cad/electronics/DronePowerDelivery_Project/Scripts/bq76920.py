@@ -1,0 +1,34 @@
+## BQ76920 Register Map
+
+SYS_STAT    = 0x00
+CELLBAL1    = 0x01
+
+SYS_CTRL1   = 0x04
+SYS_CTRL2   = 0x05
+PROTECT1    = 0x06
+PROTECT2    = 0x07
+PROTECT3    = 0x08
+OV_TRIP     = 0x09
+UV_TRIP     = 0x0A
+CC_CFG      = 0x0B
+VC1_HI      = 0x0C
+VC1_LO      = 0x0D
+VC2_HI      = 0x0E
+VC2_LO      = 0x0F
+VC3_HI      = 0x10
+VC3_LO      = 0x11
+VC4_HI      = 0x12
+VC4_LO      = 0x13
+VC5_HI      = 0x14
+VC5_LO      = 0x15
+
+BAT_HI      = 0x2A
+BAT_LO      = 0x2B
+TS1_HI      = 0x2C
+TS1_LO      = 0x2D
+
+CC_HI       = 0x32
+CC_LO       = 0x33
+ADCGAIN1    = 0x50
+ADCOFFSET   = 0x51
+ADCGAIN2    = 0x59
