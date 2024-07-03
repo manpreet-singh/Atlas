@@ -18,11 +18,11 @@ prpl = port.get_port(device)
 
 bat_volts = 0
 
-## Device Initalization
+## Device Initialization
 prpl.write([CC_CFG, 0x19], relax=False)
 
 ## 
-prpl.write([SYS_CTRL1, 0x18]) # Switch external thermister and ADC on
+prpl.write([SYS_CTRL1, 0x18]) # Switch external thermistor and ADC on
 prpl.write([SYS_CTRL2, 0x40]) # switch CC_EN on
 
 
